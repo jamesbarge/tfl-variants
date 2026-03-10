@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# QA artifacts
+public/qa-screenshots/
+qa-test.mjs
+qa-scroll-test.mjs
+QA-REPORT.md

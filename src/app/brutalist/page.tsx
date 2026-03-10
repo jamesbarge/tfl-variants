@@ -1,0 +1,553 @@
+"use client";
+
+import { LogoPair } from "@/components/shared/logo-pair";
+import { CTAButton } from "@/components/shared/cta-button";
+import { StatCounter } from "@/components/shared/stat-counter";
+import { ScrollReveal } from "@/components/motion";
+import {
+  hero,
+  problem,
+  employees,
+  challenges,
+  emotionalToll,
+  gap,
+  gapInsight,
+  solution,
+  services,
+  solutionFooter,
+  caseStudy,
+  diversityFooter,
+  tflProjection,
+  testimonialSection,
+  ctaSection,
+  footer,
+} from "@/lib/content/tfl";
+import {
+  ukWorkforceStats,
+  gapStats,
+  baChallengeStats,
+  baResultStats,
+  diversityStats,
+  tflProjectionStats,
+} from "@/lib/content/stats";
+import { testimonials, executiveQuotes } from "@/lib/content/testimonials";
+import { caseStudyImage, caregivingImage } from "@/lib/content/images";
+
+export default function BrutalistPage() {
+  return (
+    <div className="min-h-screen bg-floral-white text-charcoal font-work-sans selection:bg-coral selection:text-white">
+      {/* ───────────── HEADER ───────────── */}
+      <header className="border-b-4 border-charcoal px-6 py-4 flex items-center justify-between">
+        <LogoPair kareheroVariant="coral" size="md" />
+        <span className="hidden sm:block uppercase text-xs tracking-[0.3em] font-semibold text-charcoal/50">
+          Care Simplified
+        </span>
+      </header>
+
+      {/* ───────────── HERO ───────────── */}
+      <section className="relative border-b-4 border-charcoal">
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
+          {/* Rotated label */}
+          <div className="hidden lg:flex items-center justify-center border-r-4 border-charcoal w-16">
+            <span className="block -rotate-90 whitespace-nowrap uppercase text-xs tracking-[0.3em] font-bold text-charcoal/40">
+              Hero
+            </span>
+          </div>
+
+          <div className="px-6 sm:px-12 lg:px-16 py-16 sm:py-24 lg:py-32">
+            <ScrollReveal direction="up" duration={0.5}>
+              <h1 className="font-lora italic font-semibold text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-marine-green leading-[1.05] tracking-[-0.02em] max-w-5xl">
+                {hero.headline}
+              </h1>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.15} duration={0.5}>
+              <p className="mt-8 text-lg sm:text-xl text-charcoal/80 max-w-3xl leading-relaxed">
+                {hero.subheadline}
+              </p>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.3} duration={0.5}>
+              <div className="mt-10">
+                <CTAButton
+                  variant="coral"
+                  size="lg"
+                  className="rounded-none border-4 border-charcoal shadow-[8px_8px_0px_#404042] hover:shadow-[4px_4px_0px_#404042] hover:translate-x-[4px] hover:translate-y-[4px] transition-all uppercase tracking-wide"
+                />
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────── PROBLEM (UK Stats) ───────────── */}
+      <section className="relative border-b-4 border-charcoal">
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
+          <div className="hidden lg:flex items-center justify-center border-r-4 border-charcoal w-16">
+            <span className="block -rotate-90 whitespace-nowrap uppercase text-xs tracking-[0.3em] font-bold text-charcoal/40">
+              Problem
+            </span>
+          </div>
+
+          <div className="px-6 sm:px-12 lg:px-16 py-16 sm:py-20">
+            <ScrollReveal direction="up">
+              <h2 className="font-lora italic font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-coral leading-tight tracking-[-0.02em]">
+                {problem.headline}
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.1}>
+              <p className="mt-6 text-lg text-charcoal/70 max-w-3xl">
+                {problem.subheadline}
+              </p>
+            </ScrollReveal>
+
+            {/* Stats Grid */}
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-0">
+              {ukWorkforceStats.map((stat, i) => (
+                <ScrollReveal key={i} direction="up" delay={i * 0.08}>
+                  <div className="border-4 border-charcoal p-6 sm:p-8 shadow-[8px_8px_0px_#404042] bg-white -ml-1 -mt-1">
+                    <StatCounter
+                      stat={stat}
+                      className="text-left"
+                      valueClassName="text-4xl sm:text-5xl md:text-6xl font-mono not-italic text-coral"
+                      labelClassName="text-sm text-charcoal/70 mt-3 uppercase tracking-wide"
+                    />
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────── THEIR EMPLOYEES ───────────── */}
+      <section className="relative border-b-4 border-charcoal bg-marine-green text-white">
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
+          <div className="hidden lg:flex items-center justify-center border-r-4 border-white/20 w-16">
+            <span className="block -rotate-90 whitespace-nowrap uppercase text-xs tracking-[0.3em] font-bold text-white/40">
+              Employees
+            </span>
+          </div>
+
+          <div className="px-6 sm:px-12 lg:px-16 py-16 sm:py-20">
+            <ScrollReveal direction="up">
+              <h2 className="font-lora italic font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-sunflower leading-tight tracking-[-0.02em]">
+                {employees.headline}
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.1}>
+              <p className="mt-6 text-lg text-white/70 max-w-3xl">
+                {employees.subheadline}
+              </p>
+            </ScrollReveal>
+
+            {/* Challenges */}
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-0">
+              {challenges.map((challenge, i) => (
+                <ScrollReveal key={i} direction="up" delay={i * 0.1}>
+                  <div className="border-4 border-white/30 p-8 -ml-1 -mt-1 hover:bg-white/5 transition-colors">
+                    <span className="block uppercase text-xs tracking-[0.3em] text-sunflower font-bold mb-3">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="font-lora italic font-semibold text-2xl sm:text-3xl text-white mb-4 tracking-[-0.02em]">
+                      {challenge.title}
+                    </h3>
+                    <p className="text-white/70 leading-relaxed">
+                      {challenge.description}
+                    </p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            {/* Emotional Toll */}
+            <ScrollReveal direction="up" delay={0.2}>
+              <div className="mt-12 border-4 border-sunflower p-8 sm:p-12 shadow-[8px_8px_0px_#FFDD6C]">
+                <span className="block uppercase text-xs tracking-[0.3em] text-sunflower font-bold mb-4">
+                  {emotionalToll.label}
+                </span>
+                <p className="font-mono text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-sunflower leading-none">
+                  {emotionalToll.statValue}
+                </p>
+                <p className="mt-4 text-lg text-white/80 max-w-2xl">
+                  {emotionalToll.text}
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────── THE GAP ───────────── */}
+      <section className="relative border-b-4 border-charcoal">
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
+          <div className="hidden lg:flex items-center justify-center border-r-4 border-charcoal w-16">
+            <span className="block -rotate-90 whitespace-nowrap uppercase text-xs tracking-[0.3em] font-bold text-charcoal/40">
+              The Gap
+            </span>
+          </div>
+
+          <div className="px-6 sm:px-12 lg:px-16 py-16 sm:py-20">
+            <ScrollReveal direction="up">
+              <h2 className="font-lora italic font-semibold text-4xl sm:text-5xl md:text-6xl text-marine-green leading-tight tracking-[-0.02em] max-w-4xl">
+                {gap.headline}
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.1}>
+              <p className="mt-6 text-lg text-charcoal/70 max-w-3xl">
+                {gap.subheadline}
+              </p>
+            </ScrollReveal>
+
+            {/* Gap Insight Block */}
+            <ScrollReveal direction="up" delay={0.15}>
+              <div className="mt-10 border-l-8 border-coral pl-8 py-4">
+                <h3 className="font-lora italic font-semibold text-2xl sm:text-3xl text-charcoal leading-snug tracking-[-0.02em]">
+                  {gapInsight.headline}
+                </h3>
+                <p className="mt-4 text-charcoal/70 leading-relaxed max-w-2xl">
+                  {gapInsight.body}
+                </p>
+              </div>
+            </ScrollReveal>
+
+            {/* Gap Stats */}
+            <div className="mt-12 flex flex-col sm:flex-row gap-0">
+              {gapStats.map((stat, i) => (
+                <ScrollReveal key={i} direction="up" delay={i * 0.1}>
+                  <div className="border-4 border-charcoal p-6 sm:p-8 shadow-[8px_8px_0px_#404042] bg-white -ml-1 -mt-1 flex-1">
+                    <StatCounter
+                      stat={stat}
+                      className="text-left"
+                      valueClassName="text-4xl sm:text-5xl font-mono not-italic text-coral"
+                      labelClassName="text-sm text-charcoal/70 mt-3"
+                    />
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────── SOLUTION ───────────── */}
+      <section className="relative border-b-4 border-charcoal bg-coral text-white">
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
+          <div className="hidden lg:flex items-center justify-center border-r-4 border-white/20 w-16">
+            <span className="block -rotate-90 whitespace-nowrap uppercase text-xs tracking-[0.3em] font-bold text-white/40">
+              Solution
+            </span>
+          </div>
+
+          <div className="px-6 sm:px-12 lg:px-16 py-16 sm:py-20">
+            {solution.label && (
+              <ScrollReveal direction="up">
+                <span className="block uppercase text-xs tracking-[0.3em] font-bold text-white/60 mb-4">
+                  {solution.label}
+                </span>
+              </ScrollReveal>
+            )}
+            <ScrollReveal direction="up" delay={0.05}>
+              <h2 className="font-lora italic font-semibold text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-tight tracking-[-0.02em]">
+                {solution.headline}
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.1}>
+              <p className="mt-6 text-lg text-white/80 max-w-3xl">
+                {solution.subheadline}
+              </p>
+            </ScrollReveal>
+
+            {/* Services */}
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
+              {services.map((service, i) => (
+                <ScrollReveal key={i} direction="up" delay={i * 0.08}>
+                  <div className="border-4 border-white/40 p-8 -ml-1 -mt-1 hover:bg-white/10 transition-colors">
+                    <span className="block font-mono text-4xl sm:text-5xl font-bold text-white/30 mb-4">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="font-lora italic font-semibold text-xl sm:text-2xl text-white mb-3 tracking-[-0.02em]">
+                      {service.title}
+                    </h3>
+                    <p className="text-white/70 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            <ScrollReveal direction="up" delay={0.3}>
+              <p className="mt-10 text-white/60 text-sm uppercase tracking-wide max-w-2xl">
+                {solutionFooter}
+              </p>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────── CASE STUDY ───────────── */}
+      <section className="relative border-b-4 border-charcoal">
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
+          <div className="hidden lg:flex items-center justify-center border-r-4 border-charcoal w-16">
+            <span className="block -rotate-90 whitespace-nowrap uppercase text-xs tracking-[0.3em] font-bold text-charcoal/40">
+              Proof
+            </span>
+          </div>
+
+          <div className="px-6 sm:px-12 lg:px-16 py-16 sm:py-20">
+            {caseStudy.label && (
+              <ScrollReveal direction="up">
+                <span className="block uppercase text-xs tracking-[0.3em] font-bold text-coral mb-4">
+                  {caseStudy.label}
+                </span>
+              </ScrollReveal>
+            )}
+            <ScrollReveal direction="up" delay={0.05}>
+              <h2 className="font-lora italic font-semibold text-4xl sm:text-5xl md:text-6xl text-marine-green leading-tight tracking-[-0.02em] max-w-4xl">
+                {caseStudy.headline}
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.1}>
+              <p className="mt-6 text-lg text-charcoal/70 max-w-3xl">
+                {caseStudy.subheadline}
+              </p>
+            </ScrollReveal>
+
+            {/* BA Challenge Stats */}
+            <ScrollReveal direction="up" delay={0.15}>
+              <h3 className="mt-12 font-lora italic font-semibold text-2xl sm:text-3xl text-charcoal tracking-[-0.02em]">
+                The challenge at British Airways
+              </h3>
+            </ScrollReveal>
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0">
+              {baChallengeStats.map((stat, i) => (
+                <ScrollReveal key={i} direction="up" delay={i * 0.08}>
+                  <div className="border-4 border-charcoal p-5 shadow-[8px_8px_0px_#404042] bg-white -ml-1 -mt-1">
+                    <StatCounter
+                      stat={stat}
+                      className="text-left"
+                      valueClassName="text-3xl sm:text-4xl font-mono not-italic text-marine-green"
+                      labelClassName="text-xs text-charcoal/70 mt-2 uppercase tracking-wide"
+                    />
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            {/* BA Result Stats */}
+            <ScrollReveal direction="up" delay={0.15}>
+              <h3 className="mt-14 font-lora italic font-semibold text-2xl sm:text-3xl text-charcoal tracking-[-0.02em]">
+                The results
+              </h3>
+            </ScrollReveal>
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-0">
+              {baResultStats.map((stat, i) => (
+                <ScrollReveal key={i} direction="up" delay={i * 0.08}>
+                  <div className="border-4 border-coral p-5 shadow-[8px_8px_0px_#EA6430] bg-white -ml-1 -mt-1">
+                    <StatCounter
+                      stat={stat}
+                      className="text-left"
+                      valueClassName="text-3xl sm:text-4xl font-mono not-italic text-coral"
+                      labelClassName="text-xs text-charcoal/70 mt-2"
+                    />
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            {/* Diversity Stats */}
+            <ScrollReveal direction="up" delay={0.15}>
+              <h3 className="mt-14 font-lora italic font-semibold text-2xl sm:text-3xl text-charcoal tracking-[-0.02em]">
+                Diversity &amp; retention impact
+              </h3>
+            </ScrollReveal>
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-0">
+              {diversityStats.map((stat, i) => (
+                <ScrollReveal key={i} direction="up" delay={i * 0.1}>
+                  <div className="border-4 border-charcoal p-6 shadow-[8px_8px_0px_#404042] bg-sunflower -ml-1 -mt-1">
+                    <StatCounter
+                      stat={stat}
+                      className="text-left"
+                      valueClassName="text-4xl sm:text-5xl font-mono not-italic text-marine-green"
+                      labelClassName="text-sm text-charcoal/80 mt-3"
+                    />
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+            <ScrollReveal direction="up" delay={0.2}>
+              <p className="mt-6 text-charcoal/60 text-sm uppercase tracking-wide">
+                {diversityFooter}
+              </p>
+            </ScrollReveal>
+
+            {/* TFL Projections */}
+            {tflProjection.label && (
+              <ScrollReveal direction="up" delay={0.15}>
+                <span className="block mt-14 uppercase text-xs tracking-[0.3em] font-bold text-coral mb-2">
+                  {tflProjection.label}
+                </span>
+              </ScrollReveal>
+            )}
+            <ScrollReveal direction="up" delay={0.2}>
+              <p className="text-lg text-charcoal/70 max-w-3xl mb-6">
+                {tflProjection.body}
+              </p>
+            </ScrollReveal>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-0">
+              {tflProjectionStats.map((stat, i) => (
+                <ScrollReveal key={i} direction="up" delay={i * 0.1}>
+                  <div className="border-4 border-marine-green p-6 shadow-[8px_8px_0px_#00433D] bg-white -ml-1 -mt-1">
+                    <StatCounter
+                      stat={stat}
+                      className="text-left"
+                      valueClassName="text-4xl sm:text-5xl font-mono not-italic text-marine-green"
+                      labelClassName="text-sm text-charcoal/70 mt-3"
+                    />
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────── EXECUTIVE PERSPECTIVE ───────────── */}
+      <section className="relative border-b-4 border-charcoal bg-sunflower">
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
+          <div className="hidden lg:flex items-center justify-center border-r-4 border-charcoal w-16">
+            <span className="block -rotate-90 whitespace-nowrap uppercase text-xs tracking-[0.3em] font-bold text-charcoal/40">
+              Exec
+            </span>
+          </div>
+
+          <div className="px-6 sm:px-12 lg:px-16 py-16 sm:py-20">
+            <ScrollReveal direction="up">
+              <span className="block uppercase text-xs tracking-[0.3em] font-bold text-marine-green mb-4">
+                Executive Perspective
+              </span>
+              <h2 className="font-lora italic font-semibold text-4xl sm:text-5xl text-charcoal leading-tight tracking-[-0.02em] mb-10">
+                From the people who&apos;ve seen the data
+              </h2>
+            </ScrollReveal>
+
+            <div className="space-y-0">
+              {executiveQuotes.map((eq, i) => (
+                <ScrollReveal key={i} direction="up" delay={i * 0.15}>
+                  <div className="border-4 border-charcoal p-8 sm:p-12 -mt-1 bg-white shadow-[8px_8px_0px_#404042]">
+                    {eq.context && (
+                      <span className="block uppercase text-xs tracking-[0.3em] text-charcoal/50 font-bold mb-4">
+                        {eq.context}
+                      </span>
+                    )}
+                    <blockquote className="text-lg sm:text-xl text-charcoal leading-relaxed max-w-3xl">
+                      &ldquo;{eq.quote}&rdquo;
+                    </blockquote>
+                    <div className="mt-6">
+                      <cite className="not-italic font-work-sans font-semibold text-sm text-coral">
+                        {eq.attribution}
+                      </cite>
+                      <p className="text-xs text-charcoal/50 font-work-sans">
+                        {eq.role}, {eq.company}
+                      </p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────── TESTIMONIALS ───────────── */}
+      <section className="relative border-b-4 border-charcoal bg-charcoal text-white">
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
+          <div className="hidden lg:flex items-center justify-center border-r-4 border-white/20 w-16">
+            <span className="block -rotate-90 whitespace-nowrap uppercase text-xs tracking-[0.3em] font-bold text-white/40">
+              Voices
+            </span>
+          </div>
+
+          <div className="px-6 sm:px-12 lg:px-16 py-16 sm:py-20">
+            <ScrollReveal direction="up">
+              <h2 className="font-lora italic font-semibold text-4xl sm:text-5xl md:text-6xl text-coral leading-tight tracking-[-0.02em]">
+                {testimonialSection.headline}
+              </h2>
+            </ScrollReveal>
+
+            <div className="mt-12 space-y-0">
+              {testimonials.map((testimonial, i) => (
+                <ScrollReveal key={i} direction="up" delay={i * 0.15}>
+                  <div className="border-4 border-white/20 p-8 sm:p-12 -mt-1">
+                    <span className="block font-mono text-6xl sm:text-7xl text-coral/40 leading-none mb-4">
+                      &ldquo;
+                    </span>
+                    <blockquote className="text-lg sm:text-xl text-white/90 leading-relaxed max-w-3xl">
+                      {testimonial.quote}
+                    </blockquote>
+                    <cite className="block mt-6 text-sm text-white/50 not-italic uppercase tracking-wide">
+                      — {testimonial.attribution}
+                    </cite>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────────── CTA + FOOTER ───────────── */}
+      <section className="relative bg-floral-white">
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
+          <div className="hidden lg:flex items-center justify-center border-r-4 border-charcoal w-16">
+            <span className="block -rotate-90 whitespace-nowrap uppercase text-xs tracking-[0.3em] font-bold text-charcoal/40">
+              Action
+            </span>
+          </div>
+
+          <div className="px-6 sm:px-12 lg:px-16 py-16 sm:py-24">
+            <ScrollReveal direction="up">
+              <h2 className="font-lora italic font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-marine-green leading-tight tracking-[-0.02em] max-w-4xl">
+                {ctaSection.headline}
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.1}>
+              <p className="mt-6 text-lg text-charcoal/70 max-w-2xl">
+                {ctaSection.subheadline}
+              </p>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.15}>
+              <ul className="mt-6 space-y-3">
+                {ctaSection.items.map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-3 text-charcoal/80"
+                  >
+                    <span className="block w-3 h-3 mt-1.5 bg-coral flex-shrink-0" />
+                    <span>{typeof item === "string" ? item : item.text}</span>
+                  </li>
+                ))}
+              </ul>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={0.25}>
+              <div className="mt-10">
+                <CTAButton
+                  variant="coral"
+                  size="lg"
+                  className="rounded-none border-4 border-charcoal shadow-[8px_8px_0px_#404042] hover:shadow-[4px_4px_0px_#404042] hover:translate-x-[4px] hover:translate-y-[4px] transition-all uppercase tracking-wide text-xl"
+                />
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <footer className="border-t-4 border-charcoal px-6 sm:px-12 lg:px-16 py-6 flex items-center justify-between">
+          <LogoPair kareheroVariant="coral" size="sm" />
+          <span className="text-xs text-charcoal/40 uppercase tracking-wide">
+            {footer.copyright}
+          </span>
+        </footer>
+      </section>
+    </div>
+  );
+}
