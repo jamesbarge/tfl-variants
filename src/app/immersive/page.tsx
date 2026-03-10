@@ -153,7 +153,7 @@ export default function ImmersivePage() {
           ═══════════════════════════════════════════════════════ */}
       <section className="snap-start min-h-screen relative flex flex-col justify-center bg-floral-white text-charcoal px-6 sm:px-12 lg:px-20 py-24 overflow-hidden">
         <div className="max-w-5xl mx-auto w-full">
-          <div className="sticky top-24 z-10">
+          <div>
             <ScrollReveal direction="up" duration={0.9} distance={70}>
               <p className="text-sm uppercase tracking-[0.2em] text-coral font-semibold mb-4">
                 The Crisis
@@ -163,7 +163,7 @@ export default function ImmersivePage() {
               </h2>
             </ScrollReveal>
           </div>
-          <div className="relative z-20 mt-10">
+          <div className="mt-10">
             <ScrollReveal direction="up" delay={0.2} duration={0.8} distance={60}>
               <p className="text-xl text-charcoal/70 max-w-3xl leading-relaxed">
                 {problem.subheadline}
