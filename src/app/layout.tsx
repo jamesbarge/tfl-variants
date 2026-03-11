@@ -18,13 +18,13 @@ const workSans = Work_Sans({
 export const metadata: Metadata = {
   title: "KareHero for Transport for London | Care Support for Your Workforce",
   description:
-    "1 in 5 TFL employees are carers. KareHero provides dedicated Care Advisors to help your workforce navigate care responsibilities.",
+    "1 in 5 TfL employees are carers. KareHero provides dedicated Care Advisors to help your workforce navigate care responsibilities.",
   openGraph: {
     type: "website",
     url: "https://tfl.karehero.com/",
     title: "KareHero for Transport for London",
     description:
-      "1 in 5 TFL employees are carers. KareHero provides dedicated Care Advisors to help your workforce navigate care responsibilities.",
+      "1 in 5 TfL employees are carers. KareHero provides dedicated Care Advisors to help your workforce navigate care responsibilities.",
     siteName: "KareHero",
   },
 };

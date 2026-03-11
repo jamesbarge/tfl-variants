@@ -14,8 +14,6 @@ import {
   employees,
   challenges,
   emotionalToll,
-  gap,
-  gapInsight,
   solution,
   services,
   solutionFooter,
@@ -29,14 +27,13 @@ import {
 
 import {
   ukWorkforceStats,
-  gapStats,
   baChallengeStats,
   baResultStats,
   diversityStats,
   tflProjectionStats,
 } from "@/lib/content/stats";
 
-import { testimonials, executiveQuotes } from "@/lib/content/testimonials";
+import { testimonials } from "@/lib/content/testimonials";
 import { caseStudyImage } from "@/lib/content/images";
 
 import {
@@ -282,57 +279,6 @@ export default function BentoPage() {
             </BentoGridItem>
           </BentoGrid>
         </ScrollReveal>
-        </section>
-
-        {/* ═══════════════════════════════════════════
-            SECTION 4 - THE GAP
-        ═══════════════════════════════════════════ */}
-        <section aria-label="The Support Gap">
-        <ScrollReveal>
-          <BentoGrid>
-            <BentoGridItem
-              colSpan={2}
-              rowSpan={2}
-              className="bg-marine-green text-white p-8 border-none"
-            >
-              <p className="text-xs uppercase tracking-widest text-lime-green/70 mb-3 font-work-sans">
-                The Gap
-              </p>
-              <h2 className="text-2xl md:text-3xl font-lora italic font-semibold mb-4 leading-snug">
-                {gap.headline}
-              </h2>
-              <p className="text-white/70 font-work-sans leading-relaxed mb-6">
-                {gap.subheadline}
-              </p>
-              <div className="bg-white/10 rounded-xl p-5">
-                <p className="font-lora italic font-semibold text-lg text-sunflower mb-3">
-                  {gapInsight.headline}
-                </p>
-                <p className="text-white/70 font-work-sans text-sm leading-relaxed">
-                  {gapInsight.body}
-                </p>
-              </div>
-            </BentoGridItem>
-
-            {gapStats.map((stat, i) => {
-              const bgColors = [
-                "bg-sunflower/30 border-none",
-                "bg-coral/10 border-none",
-                "bg-gardenia",
-              ];
-              return (
-                <BentoGridItem key={i} className={`${bgColors[i]} p-6`}>
-                  <StatCounter
-                    stat={stat}
-                    valueClassName="text-marine-green text-4xl"
-                    labelClassName="text-charcoal/70 text-xs"
-                  />
-                </BentoGridItem>
-              );
-            })}
-          </BentoGrid>
-        </ScrollReveal>
-
         </section>
 
         {/* ═══════════════════════════════════════════
@@ -593,64 +539,6 @@ export default function BentoPage() {
                         i < 2 ? "text-white/70" : "text-charcoal/70"
                       }
                     />
-                  </Spotlight>
-                </BentoGridItem>
-              );
-            })}
-          </BentoGrid>
-        </ScrollReveal>
-
-        {/* ═══════════════════════════════════════════
-            EXECUTIVE PERSPECTIVE
-        ═══════════════════════════════════════════ */}
-        <ScrollReveal>
-          <BentoGrid>
-            <BentoGridItem
-              colSpan={3}
-              className="bg-sunflower/30 p-6 border-none text-center"
-            >
-              <p className="text-xs uppercase tracking-widest text-marine-green/60 mb-2 font-work-sans">
-                Executive Perspective
-              </p>
-              <h2 className="text-2xl md:text-3xl font-lora italic font-semibold text-marine-green">
-                From the people who&apos;ve seen the data
-              </h2>
-            </BentoGridItem>
-          </BentoGrid>
-        </ScrollReveal>
-
-        <ScrollReveal delay={0.1}>
-          <BentoGrid>
-            {executiveQuotes.map((eq, i) => {
-              const isFirst = i === 0;
-              return (
-                <BentoGridItem
-                  key={i}
-                  colSpan={isFirst ? 2 : 1}
-                  className={
-                    isFirst
-                      ? "bg-marine-green text-white p-8 border-none"
-                      : "bg-gardenia p-8"
-                  }
-                >
-                  <Spotlight className="rounded-2xl">
-                    {eq.context && (
-                      <p className={`text-xs uppercase tracking-wide mb-3 font-work-sans ${isFirst ? "text-white/40" : "text-charcoal/40"}`}>
-                        {eq.context}
-                      </p>
-                    )}
-                    <Quote className={`w-8 h-8 mb-4 ${isFirst ? "text-lime-green/30" : "text-coral/30"}`} />
-                    <p className={`font-work-sans leading-relaxed mb-4 ${isFirst ? "text-white/90" : "text-charcoal/80"}`}>
-                      &ldquo;{eq.quote}&rdquo;
-                    </p>
-                    <div>
-                      <p className={`font-work-sans font-semibold text-sm ${isFirst ? "text-lime-green" : "text-coral"}`}>
-                        {eq.attribution}
-                      </p>
-                      <p className={`text-xs font-work-sans ${isFirst ? "text-white/50" : "text-charcoal/50"}`}>
-                        {eq.role}, {eq.company}
-                      </p>
-                    </div>
                   </Spotlight>
                 </BentoGridItem>
               );

@@ -65,4 +65,12 @@ export const variants: VariantMeta[] = [
     complexity: "Low-Med",
     aesthetic: "Quiet confidence",
   },
+  {
+    slug: "hybrid",
+    name: "Split + Editorial Hybrid",
+    description:
+      "50/50 split-screen layouts for problem/challenges, magazine editorial for case study and CTA",
+    complexity: "Medium",
+    aesthetic: "Dynamic storytelling",
+  },
 ];

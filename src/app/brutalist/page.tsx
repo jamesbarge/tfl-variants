@@ -3,6 +3,8 @@
 import { LogoPair } from "@/components/shared/logo-pair";
 import { CTAButton } from "@/components/shared/cta-button";
 import { StatCounter } from "@/components/shared/stat-counter";
+import { ClientLogos } from "@/components/shared/client-logos";
+import { CalendarBooking } from "@/components/shared/calendar-embed";
 import { ScrollReveal } from "@/components/motion";
 import {
   hero,
@@ -10,28 +12,25 @@ import {
   employees,
   challenges,
   emotionalToll,
-  gap,
-  gapInsight,
   solution,
   services,
   solutionFooter,
   caseStudy,
-  diversityFooter,
   tflProjection,
   testimonialSection,
   ctaSection,
   footer,
+  calendarBookingUrl,
 } from "@/lib/content/tfl";
 import {
-  ukWorkforceStats,
-  gapStats,
+  problemStats,
   baChallengeStats,
   baResultStats,
-  diversityStats,
   tflProjectionStats,
 } from "@/lib/content/stats";
-import { testimonials, executiveQuotes } from "@/lib/content/testimonials";
-import { caseStudyImage, caregivingImage } from "@/lib/content/images";
+import { testimonials } from "@/lib/content/testimonials";
+import { caregivingImage, caseStudyImage } from "@/lib/content/images";
+import Image from "next/image";
 
 export default function BrutalistPage() {
   return (
@@ -47,7 +46,6 @@ export default function BrutalistPage() {
       {/* ───────────── HERO ───────────── */}
       <section className="relative border-b-4 border-charcoal">
         <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
-          {/* Rotated label */}
           <div className="hidden lg:flex items-center justify-center border-r-4 border-charcoal w-16">
             <span className="block -rotate-90 whitespace-nowrap uppercase text-xs tracking-[0.3em] font-bold text-charcoal/40">
               Hero
@@ -78,7 +76,7 @@ export default function BrutalistPage() {
         </div>
       </section>
 
-      {/* ───────────── PROBLEM (UK Stats) ───────────── */}
+      {/* ───────────── PROBLEM ───────────── */}
       <section className="relative border-b-4 border-charcoal">
         <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
           <div className="hidden lg:flex items-center justify-center border-r-4 border-charcoal w-16">
@@ -99,9 +97,9 @@ export default function BrutalistPage() {
               </p>
             </ScrollReveal>
 
-            {/* Stats Grid */}
-            <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-0">
-              {ukWorkforceStats.map((stat, i) => (
+            {/* Problem Stats Grid - 5 items */}
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0">
+              {problemStats.map((stat, i) => (
                 <ScrollReveal key={i} direction="up" delay={i * 0.08}>
                   <div className="border-4 border-charcoal p-6 sm:p-8 shadow-[8px_8px_0px_#404042] bg-white -ml-1 -mt-1">
                     <StatCounter
@@ -114,6 +112,20 @@ export default function BrutalistPage() {
                 </ScrollReveal>
               ))}
             </div>
+
+            {/* Caregiving Image */}
+            <ScrollReveal direction="up" delay={0.2}>
+              <div className="mt-12 border-4 border-charcoal shadow-[8px_8px_0px_#404042] overflow-hidden">
+                <Image
+                  src={caregivingImage.src}
+                  alt={caregivingImage.alt}
+                  width={caregivingImage.width}
+                  height={caregivingImage.height}
+                  priority
+                  className="object-cover w-full h-auto aspect-[21/9]"
+                />
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -176,58 +188,6 @@ export default function BrutalistPage() {
         </div>
       </section>
 
-      {/* ───────────── THE GAP ───────────── */}
-      <section className="relative border-b-4 border-charcoal">
-        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
-          <div className="hidden lg:flex items-center justify-center border-r-4 border-charcoal w-16">
-            <span className="block -rotate-90 whitespace-nowrap uppercase text-xs tracking-[0.3em] font-bold text-charcoal/40">
-              The Gap
-            </span>
-          </div>
-
-          <div className="px-6 sm:px-12 lg:px-16 py-16 sm:py-20">
-            <ScrollReveal direction="up">
-              <h2 className="font-lora italic font-semibold text-4xl sm:text-5xl md:text-6xl text-marine-green leading-tight tracking-[-0.02em] max-w-4xl">
-                {gap.headline}
-              </h2>
-            </ScrollReveal>
-            <ScrollReveal direction="up" delay={0.1}>
-              <p className="mt-6 text-lg text-charcoal/70 max-w-3xl">
-                {gap.subheadline}
-              </p>
-            </ScrollReveal>
-
-            {/* Gap Insight Block */}
-            <ScrollReveal direction="up" delay={0.15}>
-              <div className="mt-10 border-l-8 border-coral pl-8 py-4">
-                <h3 className="font-lora italic font-semibold text-2xl sm:text-3xl text-charcoal leading-snug tracking-[-0.02em]">
-                  {gapInsight.headline}
-                </h3>
-                <p className="mt-4 text-charcoal/70 leading-relaxed max-w-2xl">
-                  {gapInsight.body}
-                </p>
-              </div>
-            </ScrollReveal>
-
-            {/* Gap Stats */}
-            <div className="mt-12 flex flex-col sm:flex-row gap-0">
-              {gapStats.map((stat, i) => (
-                <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                  <div className="border-4 border-charcoal p-6 sm:p-8 shadow-[8px_8px_0px_#404042] bg-white -ml-1 -mt-1 flex-1">
-                    <StatCounter
-                      stat={stat}
-                      className="text-left"
-                      valueClassName="text-4xl sm:text-5xl font-mono not-italic text-coral"
-                      labelClassName="text-sm text-charcoal/70 mt-3"
-                    />
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ───────────── SOLUTION ───────────── */}
       <section className="relative border-b-4 border-charcoal bg-coral text-white">
         <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
@@ -261,13 +221,13 @@ export default function BrutalistPage() {
               {services.map((service, i) => (
                 <ScrollReveal key={i} direction="up" delay={i * 0.08}>
                   <div className="border-4 border-white/40 p-8 -ml-1 -mt-1 hover:bg-white/10 transition-colors">
-                    <span className="block font-mono text-4xl sm:text-5xl font-bold text-white/30 mb-4">
+                    <span className="block font-mono text-5xl sm:text-6xl font-bold text-white/30 mb-4">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="font-lora italic font-semibold text-xl sm:text-2xl text-white mb-3 tracking-[-0.02em]">
+                    <h3 className="font-lora italic font-semibold text-2xl sm:text-3xl text-white mb-3 tracking-[-0.02em]">
                       {service.title}
                     </h3>
-                    <p className="text-white/70 text-sm leading-relaxed">
+                    <p className="text-white/70 text-base leading-relaxed">
                       {service.description}
                     </p>
                   </div>
@@ -312,13 +272,13 @@ export default function BrutalistPage() {
               </p>
             </ScrollReveal>
 
-            {/* BA Challenge Stats */}
+            {/* BA Challenge Stats - 4 items */}
             <ScrollReveal direction="up" delay={0.15}>
               <h3 className="mt-12 font-lora italic font-semibold text-2xl sm:text-3xl text-charcoal tracking-[-0.02em]">
                 The challenge at British Airways
               </h3>
             </ScrollReveal>
-            <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0">
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-0">
               {baChallengeStats.map((stat, i) => (
                 <ScrollReveal key={i} direction="up" delay={i * 0.08}>
                   <div className="border-4 border-charcoal p-5 shadow-[8px_8px_0px_#404042] bg-white -ml-1 -mt-1">
@@ -333,13 +293,13 @@ export default function BrutalistPage() {
               ))}
             </div>
 
-            {/* BA Result Stats */}
+            {/* BA Result Stats - 3 items */}
             <ScrollReveal direction="up" delay={0.15}>
               <h3 className="mt-14 font-lora italic font-semibold text-2xl sm:text-3xl text-charcoal tracking-[-0.02em]">
                 The results
               </h3>
             </ScrollReveal>
-            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-0">
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-0">
               {baResultStats.map((stat, i) => (
                 <ScrollReveal key={i} direction="up" delay={i * 0.08}>
                   <div className="border-4 border-coral p-5 shadow-[8px_8px_0px_#EA6430] bg-white -ml-1 -mt-1">
@@ -354,40 +314,45 @@ export default function BrutalistPage() {
               ))}
             </div>
 
-            {/* Diversity Stats */}
-            <ScrollReveal direction="up" delay={0.15}>
-              <h3 className="mt-14 font-lora italic font-semibold text-2xl sm:text-3xl text-charcoal tracking-[-0.02em]">
-                Diversity &amp; retention impact
-              </h3>
-            </ScrollReveal>
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-0">
-              {diversityStats.map((stat, i) => (
-                <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                  <div className="border-4 border-charcoal p-6 shadow-[8px_8px_0px_#404042] bg-sunflower -ml-1 -mt-1">
-                    <StatCounter
-                      stat={stat}
-                      className="text-left"
-                      valueClassName="text-4xl sm:text-5xl font-mono not-italic text-marine-green"
-                      labelClassName="text-sm text-charcoal/80 mt-3"
-                    />
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
+            {/* Case Study Image */}
             <ScrollReveal direction="up" delay={0.2}>
-              <p className="mt-6 text-charcoal/60 text-sm uppercase tracking-wide">
-                {diversityFooter}
-              </p>
+              <div className="mt-12 border-4 border-charcoal shadow-[8px_8px_0px_#404042] overflow-hidden">
+                <Image
+                  src={caseStudyImage.src}
+                  alt={caseStudyImage.alt}
+                  width={caseStudyImage.width}
+                  height={caseStudyImage.height}
+                  className="object-cover w-full h-auto aspect-[21/9]"
+                />
+              </div>
             </ScrollReveal>
 
-            {/* TFL Projections */}
-            {tflProjection.label && (
-              <ScrollReveal direction="up" delay={0.15}>
-                <span className="block mt-14 uppercase text-xs tracking-[0.3em] font-bold text-coral mb-2">
-                  {tflProjection.label}
-                </span>
+            {/* Single Testimonial */}
+            {testimonials[0] && (
+              <ScrollReveal direction="up" delay={0.2}>
+                <div className="mt-12 border-4 border-charcoal p-8 sm:p-12 -mt-1 bg-gardenia shadow-[8px_8px_0px_#404042]">
+                  <span className="block font-mono text-6xl sm:text-7xl text-coral/40 leading-none mb-4">
+                    &ldquo;
+                  </span>
+                  <blockquote className="text-lg sm:text-xl text-charcoal/80 leading-relaxed max-w-3xl">
+                    {testimonials[0].quote}
+                  </blockquote>
+                  <cite className="block mt-6 text-sm text-charcoal/50 not-italic uppercase tracking-wide">
+                    — {testimonials[0].attribution}
+                  </cite>
+                </div>
               </ScrollReveal>
             )}
+
+            {/* TfL Projections */}
+            <ScrollReveal direction="up" delay={0.15}>
+              <span className="block mt-14 uppercase text-xs tracking-[0.3em] font-bold text-coral mb-2">
+                {tflProjection.label}
+              </span>
+              <h3 className="font-lora italic font-semibold text-4xl sm:text-5xl text-marine-green tracking-[-0.02em] mb-4">
+                {tflProjection.headline}
+              </h3>
+            </ScrollReveal>
             <ScrollReveal direction="up" delay={0.2}>
               <p className="text-lg text-charcoal/70 max-w-3xl mb-6">
                 {tflProjection.body}
@@ -407,90 +372,13 @@ export default function BrutalistPage() {
                 </ScrollReveal>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ───────────── EXECUTIVE PERSPECTIVE ───────────── */}
-      <section className="relative border-b-4 border-charcoal bg-sunflower">
-        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
-          <div className="hidden lg:flex items-center justify-center border-r-4 border-charcoal w-16">
-            <span className="block -rotate-90 whitespace-nowrap uppercase text-xs tracking-[0.3em] font-bold text-charcoal/40">
-              Exec
-            </span>
-          </div>
-
-          <div className="px-6 sm:px-12 lg:px-16 py-16 sm:py-20">
-            <ScrollReveal direction="up">
-              <span className="block uppercase text-xs tracking-[0.3em] font-bold text-marine-green mb-4">
-                Executive Perspective
-              </span>
-              <h2 className="font-lora italic font-semibold text-4xl sm:text-5xl text-charcoal leading-tight tracking-[-0.02em] mb-10">
-                From the people who&apos;ve seen the data
-              </h2>
+            {/* Client Logos */}
+            <ScrollReveal direction="up" delay={0.3}>
+              <div className="mt-12">
+                <ClientLogos variant="light" />
+              </div>
             </ScrollReveal>
-
-            <div className="space-y-0">
-              {executiveQuotes.map((eq, i) => (
-                <ScrollReveal key={i} direction="up" delay={i * 0.15}>
-                  <div className="border-4 border-charcoal p-8 sm:p-12 -mt-1 bg-white shadow-[8px_8px_0px_#404042]">
-                    {eq.context && (
-                      <span className="block uppercase text-xs tracking-[0.3em] text-charcoal/50 font-bold mb-4">
-                        {eq.context}
-                      </span>
-                    )}
-                    <blockquote className="text-lg sm:text-xl text-charcoal leading-relaxed max-w-3xl">
-                      &ldquo;{eq.quote}&rdquo;
-                    </blockquote>
-                    <div className="mt-6">
-                      <cite className="not-italic font-work-sans font-semibold text-sm text-coral">
-                        {eq.attribution}
-                      </cite>
-                      <p className="text-xs text-charcoal/50 font-work-sans">
-                        {eq.role}, {eq.company}
-                      </p>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ───────────── TESTIMONIALS ───────────── */}
-      <section className="relative border-b-4 border-charcoal bg-charcoal text-white">
-        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
-          <div className="hidden lg:flex items-center justify-center border-r-4 border-white/20 w-16">
-            <span className="block -rotate-90 whitespace-nowrap uppercase text-xs tracking-[0.3em] font-bold text-white/40">
-              Voices
-            </span>
-          </div>
-
-          <div className="px-6 sm:px-12 lg:px-16 py-16 sm:py-20">
-            <ScrollReveal direction="up">
-              <h2 className="font-lora italic font-semibold text-4xl sm:text-5xl md:text-6xl text-coral leading-tight tracking-[-0.02em]">
-                {testimonialSection.headline}
-              </h2>
-            </ScrollReveal>
-
-            <div className="mt-12 space-y-0">
-              {testimonials.map((testimonial, i) => (
-                <ScrollReveal key={i} direction="up" delay={i * 0.15}>
-                  <div className="border-4 border-white/20 p-8 sm:p-12 -mt-1">
-                    <span className="block font-mono text-6xl sm:text-7xl text-coral/40 leading-none mb-4">
-                      &ldquo;
-                    </span>
-                    <blockquote className="text-lg sm:text-xl text-white/90 leading-relaxed max-w-3xl">
-                      {testimonial.quote}
-                    </blockquote>
-                    <cite className="block mt-6 text-sm text-white/50 not-italic uppercase tracking-wide">
-                      — {testimonial.attribution}
-                    </cite>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -535,6 +423,9 @@ export default function BrutalistPage() {
                   size="lg"
                   className="rounded-none border-4 border-charcoal shadow-[8px_8px_0px_#404042] hover:shadow-[4px_4px_0px_#404042] hover:translate-x-[4px] hover:translate-y-[4px] transition-all uppercase tracking-wide text-xl"
                 />
+              </div>
+              <div className="mt-4">
+                <CalendarBooking url={calendarBookingUrl} className="text-coral" />
               </div>
             </ScrollReveal>
           </div>

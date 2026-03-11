@@ -12,16 +12,12 @@ export const ukWorkforceStats: Stat[] = [
   },
 ];
 
-export const gapStats: Stat[] = [
-  { value: "85.5%", label: "of UK employers offer mental health support" },
-  {
-    value: "78%",
-    label: "of carers don't feel confident navigating care costs",
-  },
-  {
-    value: "76%",
-    label: "lack confidence managing legal care responsibilities",
-  },
+export const problemStats: Stat[] = [
+  { value: "17%", label: "say caregiving negatively affects their job performance", sublabel: "Absenteeism & presenteeism" },
+  { value: "50%", label: "of carer employees are less productive at work", sublabel: "Lost productivity" },
+  { value: "10%", label: "of carer employees resign every year", sublabel: "Higher turnover" },
+  { value: "74%", label: "report feeling stressed or anxious", sublabel: "Stress & mental health" },
+  { value: "63%", label: "are extremely worried about managing monthly costs", sublabel: "Financial wellbeing" },
 ];
 
 export const baChallengeStats: Stat[] = [
@@ -38,10 +34,6 @@ export const baChallengeStats: Stat[] = [
     label: "considered adjusting career plans",
   },
   {
-    value: "1 in 4",
-    label: "delivering 20+ hours unpaid care weekly",
-  },
-  {
     value: "£14M+",
     label: "annual cost of doing nothing",
     sublabel: "Including £10-12M in absenteeism alone",
@@ -52,7 +44,6 @@ export const baResultStats: Stat[] = [
   {
     value: "£838K",
     label: "funding identified in 7 months",
-    sublabel: "£686.8K care funding + £151.2K benefits",
   },
   {
     value: "£38K",
@@ -61,10 +52,6 @@ export const baResultStats: Stat[] = [
   {
     value: "70%+",
     label: "needed support within first 3 months",
-  },
-  {
-    value: "62%",
-    label: "used Care Assessment pathway",
   },
 ];
 
@@ -87,7 +74,7 @@ export const tflProjectionStats: Stat[] = [
   {
     value: "~5,500",
     label: "estimated carer employees across your workforce",
-    sublabel: "Based on TFL's own 1-in-5 ratio",
+    sublabel: "Based on TfL's own 1-in-5 ratio",
   },
   {
     value: "~£23M+",

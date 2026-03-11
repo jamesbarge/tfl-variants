@@ -43,11 +43,11 @@ export default function GalleryPage() {
       <section className="py-16 sm:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl text-marine-green mb-6">
-            8 Ways to Tell the Same Story
+            9 Ways to Tell the Same Story
           </h1>
           <p className="text-xl text-charcoal/70 max-w-2xl mx-auto font-work-sans">
-            Same copy. Same data. Same call to action. Eight radically different
-            visual treatments for the TFL landing page.
+            Same copy. Same data. Same call to action. Nine radically different
+            visual treatments for the TfL landing page.
           </p>
         </div>
       </section>
@@ -92,7 +92,7 @@ export default function GalleryPage() {
       {/* Footer */}
       <footer className="border-t border-gardenia py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center text-sm text-charcoal/40 font-work-sans">
-          ABM Agency - KareHero × TFL Design Exploration
+          ABM Agency - KareHero × TfL Design Exploration
         </div>
       </footer>
     </div>

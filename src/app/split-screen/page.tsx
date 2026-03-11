@@ -10,8 +10,6 @@ import {
   employees,
   challenges,
   emotionalToll,
-  gap,
-  gapInsight,
   solution,
   services,
   solutionFooter,
@@ -25,13 +23,12 @@ import {
 } from "@/lib/content/tfl";
 import {
   ukWorkforceStats,
-  gapStats,
   baChallengeStats,
   baResultStats,
   diversityStats,
   tflProjectionStats,
 } from "@/lib/content/stats";
-import { testimonials, executiveQuotes } from "@/lib/content/testimonials";
+import { testimonials } from "@/lib/content/testimonials";
 import { caregivingImage } from "@/lib/content/images";
 
 export default function SplitScreenPage() {
@@ -174,57 +171,6 @@ export default function SplitScreenPage() {
               </p>
             </div>
           </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ─── 5. THE GAP ─── */}
-      <section className="flex flex-col md:flex-row overflow-hidden">
-        {/* Left: Gap stats on Lime Green */}
-        <div className="w-full md:w-1/2 bg-lime-green flex items-center justify-center">
-          <div className="p-4 sm:p-8 md:p-12 lg:p-16 w-full">
-            <ScrollReveal direction="left">
-              <p className="uppercase tracking-widest text-marine-green/60 text-xs font-work-sans font-semibold mb-8">
-                The numbers
-              </p>
-              <div className="space-y-8">
-                {gapStats.map((stat, i) => (
-                  <div key={i}>
-                    <p className="font-lora italic font-semibold text-3xl sm:text-4xl text-marine-green">
-                      {stat.value}
-                    </p>
-                    <p className="text-sm text-marine-green/70 mt-2 leading-snug">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-
-        {/* Right: Content on Floral White */}
-        <div className="w-full md:w-1/2 bg-floral-white flex items-center">
-          <div className="p-4 sm:p-8 md:p-12 lg:p-16">
-            <ScrollReveal direction="right">
-              <p className="uppercase tracking-widest text-coral text-xs font-work-sans font-semibold mb-4">
-                The Gap
-              </p>
-              <h2 className="font-lora italic font-semibold text-3xl sm:text-4xl text-marine-green">
-                {gap.headline}
-              </h2>
-              <p className="mt-6 text-base lg:text-lg leading-relaxed text-charcoal/80">
-                {gap.subheadline}
-              </p>
-              <div className="mt-8 bg-gardenia rounded-lg p-6 border-l-4 border-coral">
-                <h3 className="font-lora italic font-semibold text-lg text-marine-green mb-3">
-                  {gapInsight.headline}
-                </h3>
-                <p className="text-sm leading-relaxed text-charcoal/70">
-                  {gapInsight.body}
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
         </div>
       </section>
 
@@ -410,65 +356,6 @@ export default function SplitScreenPage() {
         </div>
       </section>
 
-      {/* ─── EXECUTIVE PERSPECTIVE ─── */}
-      <section className="flex flex-col md:flex-row border-t-4 border-sunflower overflow-hidden">
-        {/* Left: Quote 1 on Sunflower */}
-        <div className="w-full md:w-1/2 bg-sunflower flex items-center">
-          <div className="p-4 sm:p-8 md:p-12 lg:p-16">
-            <ScrollReveal direction="left">
-              <p className="uppercase tracking-widest text-marine-green/60 text-xs font-work-sans font-semibold mb-6">
-                Executive Perspective
-              </p>
-              {executiveQuotes[0] && (
-                <blockquote>
-                  <p className="font-lora italic text-xl sm:text-2xl text-marine-green leading-relaxed">
-                    &ldquo;{executiveQuotes[0].quote}&rdquo;
-                  </p>
-                  <div className="mt-6">
-                    <p className="font-work-sans font-semibold text-sm text-marine-green">
-                      {executiveQuotes[0].attribution}
-                    </p>
-                    <p className="text-xs text-marine-green/60 font-work-sans">
-                      {executiveQuotes[0].role}, {executiveQuotes[0].company}
-                    </p>
-                  </div>
-                </blockquote>
-              )}
-            </ScrollReveal>
-          </div>
-        </div>
-
-        {/* Right: Quote 2 on Marine Green */}
-        <div className="w-full md:w-1/2 bg-marine-green text-white flex items-center">
-          <div className="p-4 sm:p-8 md:p-12 lg:p-16">
-            <ScrollReveal direction="right">
-              {executiveQuotes[1] && (
-                <>
-                  {executiveQuotes[1].context && (
-                    <p className="uppercase tracking-widest text-white/40 text-xs font-work-sans font-semibold mb-6">
-                      {executiveQuotes[1].context}
-                    </p>
-                  )}
-                  <blockquote>
-                    <p className="font-lora italic text-xl sm:text-2xl text-white leading-relaxed">
-                      &ldquo;{executiveQuotes[1].quote}&rdquo;
-                    </p>
-                    <div className="mt-6">
-                      <p className="font-work-sans font-semibold text-sm text-sunflower">
-                        {executiveQuotes[1].attribution}
-                      </p>
-                      <p className="text-xs text-white/50 font-work-sans">
-                        {executiveQuotes[1].role}, {executiveQuotes[1].company}
-                      </p>
-                    </div>
-                  </blockquote>
-                </>
-              )}
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
       {/* ─── 8. TESTIMONIALS ─── */}
       <section className="border-t-4 border-b-4 border-lime-green overflow-hidden">
         <div className="flex flex-col md:flex-row items-stretch">
@@ -483,7 +370,7 @@ export default function SplitScreenPage() {
           </div>
 
           {/* Testimonial 1 - Coral bg */}
-          <div className="w-full md:w-1/2 bg-coral text-white flex items-center">
+          <div className="w-full bg-coral text-white flex items-center">
             <div className="p-4 sm:p-8 md:p-12 lg:p-16">
               <ScrollReveal direction="left">
                 <div className="hidden md:block mb-8">
@@ -503,25 +390,6 @@ export default function SplitScreenPage() {
                   </p>
                   <footer className="mt-6 text-sm text-white/60 font-work-sans uppercase tracking-widest">
                     — {testimonials[0].attribution}
-                  </footer>
-                </blockquote>
-              </ScrollReveal>
-            </div>
-          </div>
-
-          {/* Testimonial 2 - Marine Green bg */}
-          <div className="w-full md:w-1/2 bg-marine-green text-white flex items-center">
-            <div className="p-4 sm:p-8 md:p-12 lg:p-16">
-              <ScrollReveal direction="right">
-                <blockquote>
-                  <span className="font-lora italic text-white/30 text-6xl leading-none select-none">
-                    &ldquo;
-                  </span>
-                  <p className="font-lora italic text-lg text-white leading-relaxed -mt-4">
-                    {testimonials[1].quote}
-                  </p>
-                  <footer className="mt-6 text-sm text-white/60 font-work-sans uppercase tracking-widest">
-                    — {testimonials[1].attribution}
                   </footer>
                 </blockquote>
               </ScrollReveal>
