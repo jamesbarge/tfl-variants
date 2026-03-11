@@ -36,7 +36,7 @@ export function ClientLogos({ variant = "light", className }: ClientLogosProps) 
               "h-8 sm:h-10 w-auto object-contain",
               variant === "light"
                 ? "grayscale opacity-60 hover:opacity-100 hover:grayscale-0"
-                : "grayscale brightness-0 invert opacity-60 hover:opacity-100"
+                : "grayscale brightness-0 invert opacity-60 hover:opacity-100 hover:grayscale-0 hover:brightness-100 hover:invert-0"
             )}
           />
         ))}
