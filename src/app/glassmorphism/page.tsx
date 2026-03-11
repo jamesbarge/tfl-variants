@@ -466,7 +466,7 @@ export default function GlassmorphismPage() {
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
                   <p className="text-sm text-charcoal/50 font-work-sans">
-                    — {testimonial.attribution}
+                    - {testimonial.attribution}
                   </p>
                 </div>
               ))}

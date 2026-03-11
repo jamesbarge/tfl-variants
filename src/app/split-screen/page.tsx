@@ -389,7 +389,7 @@ export default function SplitScreenPage() {
                     {testimonials[0].quote}
                   </p>
                   <footer className="mt-6 text-sm text-white/60 font-work-sans uppercase tracking-widest">
-                    — {testimonials[0].attribution}
+                    - {testimonials[0].attribution}
                   </footer>
                 </blockquote>
               </ScrollReveal>

@@ -469,7 +469,7 @@ export default function ImmersivePage() {
                     {testimonial.quote}
                   </blockquote>
                   <cite className="block mt-8 text-sm text-charcoal/50 not-italic font-work-sans uppercase tracking-wide">
-                    — {testimonial.attribution}
+                    - {testimonial.attribution}
                   </cite>
                 </div>
               </ScrollReveal>

@@ -22,7 +22,7 @@ export const contactEmails = [
 export const problem: SectionContent = {
   headline: "Caregiving is costing TfL more than you think",
   subheadline:
-    "The UK is facing a caregiving crisis that's hitting employers hard. For a workforce the size of TfL's, thousands of your people are navigating complex care situations — often alone.",
+    "The UK is facing a caregiving crisis that's hitting employers hard. For a workforce the size of TfL's, thousands of your people are navigating complex care situations, often alone.",
 };
 
 export const employees: SectionContent = {
@@ -68,7 +68,7 @@ export const solution: SectionContent = {
   label: "The Solution",
   headline: "Care Simplified",
   subheadline:
-    "KareHero turns the chaos of caregiving into a simple, supported journey. Accessible 24/7 via app and phone — built for workforces like yours.",
+    "KareHero turns the chaos of caregiving into a simple, supported journey. Accessible 24/7 via app and phone. Built for workforces like yours.",
 };
 
 export const services: Service[] = [
@@ -111,7 +111,7 @@ export const services: Service[] = [
 ];
 
 export const solutionFooter =
-  "Supporting the entire carer lifecycle — from those just starting to think about care, through to complex, long-term situations.";
+  "Supporting the entire carer lifecycle: from those just starting to think about care, through to complex, long-term situations.";
 
 export const caseStudy: SectionContent = {
   label: "Case Study",

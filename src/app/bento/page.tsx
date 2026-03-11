@@ -361,7 +361,7 @@ export default function BentoPage() {
         {/* ═══════════════════════════════════════════
             SECTION 6 - CASE STUDY (BA)
         ═══════════════════════════════════════════ */}
-        <section aria-label="Proven Results — British Airways Case Study">
+        <section aria-label="Proven Results - British Airways Case Study">
         <ScrollReveal>
           <BentoGrid>
             <BentoGridItem
@@ -584,7 +584,7 @@ export default function BentoPage() {
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
                   <p className="text-xs text-charcoal/50 font-work-sans">
-                    — {testimonial.attribution}
+                    - {testimonial.attribution}
                   </p>
                 </BentoGridItem>
               );

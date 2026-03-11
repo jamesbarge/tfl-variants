@@ -338,7 +338,7 @@ export default function BrutalistPage() {
                     {testimonials[0].quote}
                   </blockquote>
                   <cite className="block mt-6 text-sm text-charcoal/50 not-italic uppercase tracking-wide">
-                    — {testimonials[0].attribution}
+                    - {testimonials[0].attribution}
                   </cite>
                 </div>
               </ScrollReveal>

@@ -1,6 +1,6 @@
 /**
  * Centralized image URLs for TfL landing page variants.
- * Using Unsplash images — free for commercial use, no attribution required.
+ * Using Unsplash/Pexels images, free for commercial use, no attribution required.
  *
  * For production: download these images to /public/images/ and update paths.
  */
@@ -15,7 +15,7 @@ export type PageImage = {
 /** People entering a lit London Underground station at night */
 export const heroImage: PageImage = {
   src: "https://images.unsplash.com/photo-1762421028278-bb82ca35b3ed?auto=format&fit=crop&w=1200&q=80",
-  alt: "Commuters at a London Underground station — the workforce TfL supports every day",
+  alt: "Commuters at a London Underground station, the workforce TfL supports every day",
   width: 1200,
   height: 800,
 };
@@ -28,15 +28,15 @@ export const caseStudyImage: PageImage = {
   height: 800,
 };
 
-/** Diverse group of professionals in a modern office meeting */
+/** Caregiver assisting elderly man with medication in a warm, sunlit living room */
 export const solutionImage: PageImage = {
-  src: "https://images.unsplash.com/photo-1758691737543-09a1b2b715fa?auto=format&fit=crop&w=1200&q=80",
-  alt: "Professionals discussing workplace wellbeing strategy in a modern office",
+  src: "https://images.pexels.com/photos/7551668/pexels-photo-7551668.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  alt: "A caregiver assists an elderly man with medication in a warm, sunlit living room",
   width: 1200,
   height: 800,
 };
 
-/** Caregiver supporting an elderly person — warm, authentic moment */
+/** Caregiver supporting an elderly person, warm authentic moment */
 export const caregivingImage: PageImage = {
   src: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1200&q=80",
   alt: "A caregiver providing warm, hands-on support to an elderly family member",

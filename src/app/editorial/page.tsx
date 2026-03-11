@@ -395,7 +395,7 @@ export default function EditorialPage() {
                     </p>
                   </div>
                   <p className="mt-6 pl-8 text-sm text-charcoal/60 font-work-sans uppercase tracking-widest">
-                    — {t.attribution}
+                    - {t.attribution}
                   </p>
                 </blockquote>
               </ScrollReveal>

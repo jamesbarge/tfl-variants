@@ -544,7 +544,7 @@ export default function DataVizPage() {
                   {testimonials[0].quote}
                 </blockquote>
                 <cite className="block mt-5 text-sm text-charcoal/50 not-italic">
-                  — {testimonials[0].attribution}
+                  - {testimonials[0].attribution}
                 </cite>
               </div>
             </ScrollReveal>

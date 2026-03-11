@@ -81,7 +81,7 @@ export default function HybridPage() {
         </div>
       </header>
 
-      {/* ─── HERO — Full-width editorial style ─── */}
+      {/* ─── HERO - Full-width editorial style ─── */}
       <section className="bg-marine-green text-white py-24 md:py-32">
         <div className="max-w-5xl mx-auto px-6">
           <FadeIn>
@@ -107,7 +107,7 @@ export default function HybridPage() {
         </div>
       </section>
 
-      {/* ─── PROBLEM — Split-screen (stats left / copy right) ─── */}
+      {/* ─── PROBLEM - Split-screen (stats left / copy right) ─── */}
       <section className="flex flex-col md:flex-row overflow-hidden">
         {/* Left: Stats on Floral White */}
         <div className="w-full md:w-1/2 bg-floral-white flex items-center">
@@ -152,7 +152,7 @@ export default function HybridPage() {
         </div>
       </section>
 
-      {/* ─── EMPLOYEES — Split-screen (copy left / cards right) ─── */}
+      {/* ─── EMPLOYEES - Split-screen (copy left / cards right) ─── */}
       <section className="flex flex-col md:flex-row border-t-4 border-b-4 border-sunflower overflow-hidden">
         {/* Left: Content on Floral White */}
         <div className="w-full md:w-1/2 bg-floral-white flex items-center">
@@ -219,7 +219,7 @@ export default function HybridPage() {
         </div>
       </section>
 
-      {/* ─── SOLUTION — Full-width editorial grid ─── */}
+      {/* ─── SOLUTION - Full-width editorial grid ─── */}
       <section className="bg-marine-green text-white py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
@@ -274,7 +274,7 @@ export default function HybridPage() {
         </div>
       </section>
 
-      {/* ─── CASE STUDY — Editorial single-column with sidebar callout ─── */}
+      {/* ─── CASE STUDY - Editorial single-column with sidebar callout ─── */}
       <section className="bg-floral-white py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal>
@@ -371,7 +371,7 @@ export default function HybridPage() {
                       {testimonials[0].quote}
                     </blockquote>
                     <p className="mt-4 text-sm text-charcoal/60 font-work-sans uppercase tracking-widest">
-                      — {testimonials[0].attribution}
+                      - {testimonials[0].attribution}
                     </p>
                   </div>
                 </ScrollReveal>
@@ -381,7 +381,7 @@ export default function HybridPage() {
         </div>
       </section>
 
-      {/* ─── TfL PROJECTIONS + CLIENT LOGOS — Full-width centered ─── */}
+      {/* ─── TfL PROJECTIONS + CLIENT LOGOS - Full-width centered ─── */}
       <section className="bg-marine-green text-white py-20 md:py-28">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <ScrollReveal>
@@ -416,7 +416,7 @@ export default function HybridPage() {
         </div>
       </section>
 
-      {/* ─── CTA — Full-width with calendar booking ─── */}
+      {/* ─── CTA - Full-width with calendar booking ─── */}
       <section className="bg-coral text-white py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
