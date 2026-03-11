@@ -20,10 +20,10 @@ export const heroImage: PageImage = {
   height: 800,
 };
 
-/** Diverse team collaborating around a table in an office setting */
+/** Adult daughter helping elderly mother with phone in sunny park */
 export const caseStudyImage: PageImage = {
-  src: "https://images.unsplash.com/photo-1758873269276-9518d0cb4a0b?auto=format&fit=crop&w=1200&q=80",
-  alt: "A diverse team collaborating in a corporate meeting — the kind of partnership KareHero enables",
+  src: "https://images.pexels.com/photos/3791666/pexels-photo-3791666.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  alt: "A daughter sitting with her elderly mother on a park bench, helping her with a mobile phone on a sunny day",
   width: 1200,
   height: 800,
 };
