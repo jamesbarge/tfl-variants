@@ -39,7 +39,7 @@ export default function SplitScreenPage() {
     <main className="min-h-screen bg-floral-white text-charcoal overflow-x-hidden w-full max-w-full">
       {/* ─── 1. HEADER ─── */}
       <header className="bg-white border-b-4 border-coral">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 py-3 sm:px-6 sm:py-4 flex items-center justify-between gap-3">
           <LogoPair kareheroVariant="coral" size="md" />
           <CTAButton variant="coral" size="md" />
         </div>

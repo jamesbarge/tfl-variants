@@ -41,7 +41,7 @@ export default function EditorialPage() {
     <main className="min-h-screen bg-floral-white text-charcoal overflow-x-hidden">
       {/* ─── 1. HEADER ─── */}
       <header className="border-b border-gardenia">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 py-3 sm:px-6 sm:py-4 flex items-center justify-between gap-3">
           <LogoPair kareheroVariant="coral" size="md" />
           <CTAButton variant="coral" size="md" />
         </div>

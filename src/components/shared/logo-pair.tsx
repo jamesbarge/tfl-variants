@@ -24,21 +24,23 @@ export function LogoPair({
 }: LogoPairProps) {
   const s = sizes[size];
   return (
-    <div className={`flex items-center gap-4 ${className}`}>
+    <div className={`flex items-center gap-2 sm:gap-4 shrink-0 ${className}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={kareheroLogos[kareheroVariant]}
         alt="KareHero"
         width={s.kh.w}
         height={s.kh.h}
+        className="h-6 w-auto sm:h-auto"
       />
-      <div className="w-px h-6 bg-current opacity-20" />
+      <div className="w-px h-4 sm:h-6 bg-current opacity-20" />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/logos/tfl-logo.svg"
         alt="Transport for London"
         width={s.tfl.w}
         height={s.tfl.h}
+        className="h-6 w-auto sm:h-auto"
       />
     </div>
   );
