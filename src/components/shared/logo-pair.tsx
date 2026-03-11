@@ -12,9 +12,9 @@ const kareheroLogos = {
 };
 
 const sizes = {
-  sm: { kh: { w: 90, h: 24 }, tfl: { w: 60, h: 24 }, cls: "h-5 sm:h-6" },
-  md: { kh: { w: 110, h: 30 }, tfl: { w: 75, h: 30 }, cls: "h-6 sm:h-8" },
-  lg: { kh: { w: 140, h: 36 }, tfl: { w: 95, h: 36 }, cls: "h-6 sm:h-9" },
+  sm: { kh: { w: 90, h: 24 }, tfl: { w: 80, h: 32 }, khCls: "h-5 sm:h-6", tflCls: "h-7 sm:h-8" },
+  md: { kh: { w: 110, h: 30 }, tfl: { w: 100, h: 38 }, khCls: "h-6 sm:h-8", tflCls: "h-8 sm:h-10" },
+  lg: { kh: { w: 140, h: 36 }, tfl: { w: 120, h: 44 }, khCls: "h-6 sm:h-9", tflCls: "h-9 sm:h-12" },
 };
 
 export function LogoPair({
@@ -31,7 +31,7 @@ export function LogoPair({
         alt="KareHero"
         width={s.kh.w}
         height={s.kh.h}
-        className={`${s.cls} w-auto`}
+        className={`${s.khCls} w-auto`}
       />
       <div className="w-px h-4 sm:h-6 bg-current opacity-20" />
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -40,7 +40,7 @@ export function LogoPair({
         alt="Transport for London"
         width={s.tfl.w}
         height={s.tfl.h}
-        className={`${s.cls} w-auto`}
+        className={`${s.tflCls} w-auto`}
       />
     </div>
   );

@@ -124,7 +124,7 @@ export const diversityFooter =
   "Supporting carers directly advances your diversity and retention goals.";
 
 export const tflProjection: SectionContent = {
-  label: "What this means for TfL",
+  label: "What this means for Transport for London",
   headline: "What this means for TfL",
   body: "British Airways proved the ROI. TfL has the same opportunity, with a larger workforce and a higher proportion of carers.",
 };
