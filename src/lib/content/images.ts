@@ -1,5 +1,5 @@
 /**
- * Centralized image URLs for TFL landing page variants.
+ * Centralized image URLs for TfL landing page variants.
  * Using Unsplash images — free for commercial use, no attribution required.
  *
  * For production: download these images to /public/images/ and update paths.
@@ -15,7 +15,7 @@ export type PageImage = {
 /** People entering a lit London Underground station at night */
 export const heroImage: PageImage = {
   src: "https://images.unsplash.com/photo-1762421028278-bb82ca35b3ed?auto=format&fit=crop&w=1200&q=80",
-  alt: "Commuters at a London Underground station — the workforce TFL supports every day",
+  alt: "Commuters at a London Underground station — the workforce TfL supports every day",
   width: 1200,
   height: 800,
 };

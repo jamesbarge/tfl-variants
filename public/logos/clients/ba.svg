@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 48" height="48" width="180">
+  <rect width="180" height="48" fill="none"/>
+  <text x="90" y="30" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="bold" fill="#2B2B6E" text-anchor="middle" letter-spacing="1">BRITISH AIRWAYS</text>
+  <line x1="20" y1="38" x2="160" y2="38" stroke="#E02020" stroke-width="2.5"/>
+  <line x1="20" y1="42" x2="160" y2="42" stroke="#2B2B6E" stroke-width="1.5"/>
+</svg>

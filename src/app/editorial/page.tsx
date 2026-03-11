@@ -11,8 +11,6 @@ import {
   employees,
   challenges,
   emotionalToll,
-  gap,
-  gapInsight,
   solution,
   services,
   solutionFooter,
@@ -26,13 +24,12 @@ import {
 } from "@/lib/content/tfl";
 import {
   ukWorkforceStats,
-  gapStats,
   baChallengeStats,
   baResultStats,
   diversityStats,
   tflProjectionStats,
 } from "@/lib/content/stats";
-import { testimonials, executiveQuotes } from "@/lib/content/testimonials";
+import { testimonials } from "@/lib/content/testimonials";
 import { caseStudyImage, caregivingImage } from "@/lib/content/images";
 import Image from "next/image";
 
@@ -188,56 +185,6 @@ export default function EditorialPage() {
               />
             </div>
           </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ─── 5. THE GAP ─── */}
-      <section className="bg-gardenia py-20 md:py-28">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-            <div className="md:col-span-7">
-              <ScrollReveal>
-                <p className="uppercase tracking-widest text-coral text-xs font-work-sans font-semibold mb-4">
-                  The Gap
-                </p>
-                <h2 className="font-lora italic font-semibold text-3xl sm:text-4xl text-marine-green max-w-2xl">
-                  {gap.headline}
-                </h2>
-                <p className="mt-6 text-lg leading-loose text-charcoal/80">
-                  {gap.subheadline}
-                </p>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.2}>
-                <div className="mt-10 bg-floral-white rounded-lg p-8">
-                  <h3 className="font-lora italic font-semibold text-xl text-marine-green mb-4">
-                    {gapInsight.headline}
-                  </h3>
-                  <p className="text-base leading-relaxed text-charcoal/80">
-                    {gapInsight.body}
-                  </p>
-                </div>
-              </ScrollReveal>
-            </div>
-
-            {/* Gap stats sidebar */}
-            <div className="md:col-span-5 flex flex-col justify-center">
-              <ScrollReveal delay={0.3}>
-                <div className="space-y-8">
-                  {gapStats.map((stat, i) => (
-                    <div key={i} className="text-center md:text-left">
-                      <p className="font-lora italic font-semibold text-4xl text-coral">
-                        {stat.value}
-                      </p>
-                      <p className="text-sm text-charcoal/70 mt-2 leading-snug">
-                        {stat.label}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </ScrollReveal>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -422,56 +369,6 @@ export default function EditorialPage() {
           </div>
         </div>
       </section>
-
-      {/* ─── EXECUTIVE PERSPECTIVE ─── */}
-      <section className="bg-floral-white py-20 md:py-28">
-        <div className="max-w-6xl mx-auto px-6">
-          <ScrollReveal>
-            <p className="uppercase tracking-widest text-coral text-xs font-work-sans font-semibold mb-4">
-              Executive Perspective
-            </p>
-            <h2 className="font-lora italic font-semibold text-3xl sm:text-4xl text-marine-green mb-10">
-              From the people who&apos;ve seen the data
-            </h2>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {executiveQuotes.map((eq, i) => (
-              <ScrollReveal key={i} delay={i * 0.15}>
-                <blockquote className="h-full flex flex-col">
-                  {eq.context && (
-                    <p className="text-xs uppercase tracking-wide text-charcoal/50 font-work-sans mb-3">
-                      {eq.context}
-                    </p>
-                  )}
-                  <div className="border-l-4 border-coral pl-8 flex-1">
-                    <p className="font-lora italic text-lg sm:text-xl text-marine-green leading-relaxed">
-                      &ldquo;{eq.quote}&rdquo;
-                    </p>
-                  </div>
-                  <div className="mt-6 pl-8">
-                    <p className="font-work-sans font-semibold text-sm text-coral">
-                      {eq.attribution}
-                    </p>
-                    <p className="text-xs text-charcoal/50 font-work-sans">
-                      {eq.role}, {eq.company}
-                    </p>
-                  </div>
-                </blockquote>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Thin decorative divider */}
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center gap-4">
-          <div className="flex-1 h-px bg-gardenia" />
-          <div className="w-2 h-2 rounded-full bg-coral" />
-          <div className="flex-1 h-px bg-gardenia" />
-        </div>
-      </div>
 
       {/* ─── 8. TESTIMONIALS ─── */}
       <section className="bg-gardenia py-20 md:py-28">

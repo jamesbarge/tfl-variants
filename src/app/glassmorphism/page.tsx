@@ -13,8 +13,6 @@ import {
   employees,
   challenges,
   emotionalToll,
-  gap,
-  gapInsight,
   solution,
   services,
   solutionFooter,
@@ -28,14 +26,13 @@ import {
 
 import {
   ukWorkforceStats,
-  gapStats,
   baChallengeStats,
   baResultStats,
   diversityStats,
   tflProjectionStats,
 } from "@/lib/content/stats";
 
-import { testimonials, executiveQuotes } from "@/lib/content/testimonials";
+import { testimonials } from "@/lib/content/testimonials";
 import { caseStudyImage } from "@/lib/content/images";
 
 import {
@@ -244,57 +241,6 @@ export default function GlassmorphismPage() {
       </section>
 
       {/* ═══════════════════════════════════════════
-          SECTION 4 - THE GAP
-      ═══════════════════════════════════════════ */}
-      <section className="relative py-20 overflow-hidden bg-floral-white">
-        <div className="absolute inset-0 opacity-30" style={{
-          background:
-            "radial-gradient(ellipse at 20% 30%, rgba(255, 221, 109, 0.3) 0%, transparent 50%), radial-gradient(ellipse at 80% 70%, rgba(0, 67, 61, 0.1) 0%, transparent 50%)",
-        }} />
-
-        <div className="relative z-10 max-w-6xl mx-auto px-6">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <p className="text-xs uppercase tracking-widest text-coral mb-3 font-work-sans">
-                The Gap
-              </p>
-              <h2 className="text-2xl md:text-3xl font-lora italic font-semibold text-marine-green mb-4 max-w-3xl mx-auto leading-snug">
-                {gap.headline}
-              </h2>
-              <p className="text-charcoal/70 font-work-sans max-w-2xl mx-auto leading-relaxed">
-                {gap.subheadline}
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.1}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-              {gapStats.map((stat, i) => (
-                <div key={i} className={`${glassLight} p-6`}>
-                  <StatCounter
-                    stat={stat}
-                    valueClassName="text-coral text-4xl"
-                    labelClassName="text-charcoal/70 text-xs"
-                  />
-                </div>
-              ))}
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.2}>
-            <div className="bg-marine-green/5 backdrop-blur-sm border border-marine-green/10 rounded-2xl p-8 max-w-3xl mx-auto">
-              <p className="font-lora italic font-semibold text-lg text-marine-green mb-3">
-                {gapInsight.headline}
-              </p>
-              <p className="text-charcoal/70 font-work-sans leading-relaxed">
-                {gapInsight.body}
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════
           SECTION 5 - SOLUTION / SERVICES
       ═══════════════════════════════════════════ */}
       <section
@@ -488,51 +434,6 @@ export default function GlassmorphismPage() {
                     labelClassName="text-charcoal/70"
                   />
                 </MovingBorder>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════
-          EXECUTIVE PERSPECTIVE
-      ═══════════════════════════════════════════ */}
-      <section className="relative py-20 overflow-hidden" style={{
-        background:
-          "radial-gradient(ellipse at 30% 40%, rgba(255, 221, 109, 0.2) 0%, transparent 50%), radial-gradient(ellipse at 70% 60%, rgba(234, 100, 48, 0.12) 0%, transparent 50%), linear-gradient(135deg, #F0EAE0 0%, #FFFCF5 100%)",
-      }}>
-        <div className="relative z-10 max-w-5xl mx-auto px-6">
-          <ScrollReveal>
-            <p className="text-xs uppercase tracking-widest text-coral mb-3 font-work-sans text-center">
-              Executive Perspective
-            </p>
-            <h2 className="text-2xl md:text-3xl font-lora italic font-semibold text-marine-green text-center mb-10">
-              From the people who&apos;ve seen the data
-            </h2>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.1}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {executiveQuotes.map((eq, i) => (
-                <div key={i} className={`${glassLight} p-8`}>
-                  {eq.context && (
-                    <p className="text-xs uppercase tracking-wide text-charcoal/40 font-work-sans mb-3">
-                      {eq.context}
-                    </p>
-                  )}
-                  <Quote className="w-8 h-8 text-coral/30 mb-4" />
-                  <p className="text-charcoal/80 font-work-sans leading-relaxed mb-6">
-                    &ldquo;{eq.quote}&rdquo;
-                  </p>
-                  <div>
-                    <p className="font-work-sans font-semibold text-sm text-coral">
-                      {eq.attribution}
-                    </p>
-                    <p className="text-xs text-charcoal/50 font-work-sans">
-                      {eq.role}, {eq.company}
-                    </p>
-                  </div>
-                </div>
               ))}
             </div>
           </ScrollReveal>

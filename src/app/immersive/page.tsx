@@ -13,8 +13,6 @@ import {
   employees,
   challenges,
   emotionalToll,
-  gap,
-  gapInsight,
   solution,
   services,
   solutionFooter,
@@ -27,13 +25,12 @@ import {
 } from "@/lib/content/tfl";
 import {
   ukWorkforceStats,
-  gapStats,
   baChallengeStats,
   baResultStats,
   diversityStats,
   tflProjectionStats,
 } from "@/lib/content/stats";
-import { testimonials, executiveQuotes } from "@/lib/content/testimonials";
+import { testimonials } from "@/lib/content/testimonials";
 import { caseStudyImage } from "@/lib/content/images";
 
 /* ─── Icon for challenges/services ─── */
@@ -248,57 +245,6 @@ export default function ImmersivePage() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════
-          SECTION 4 - THE GAP (Marine Green)
-          ═══════════════════════════════════════════════════════ */}
-      <section className="snap-start min-h-screen relative flex flex-col justify-center bg-marine-green text-white px-6 sm:px-12 lg:px-20 py-24 overflow-hidden">
-        <BackgroundBeams className="opacity-30" />
-        <ParallaxLayer containerRef={scrollRef} speed={-0.3} className="hidden md:block absolute bottom-0 left-0 w-[600px] h-[400px] rounded-full bg-lime-green/5 blur-3xl">
-          <div className="w-full h-full" />
-        </ParallaxLayer>
-
-        <div className="max-w-5xl mx-auto w-full relative z-10">
-          <ScrollReveal direction="up" duration={1} distance={80}>
-            <h2 className="font-lora italic font-semibold text-5xl sm:text-6xl md:text-7xl text-white leading-tight tracking-[-0.02em] max-w-4xl">
-              {gap.headline}
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal direction="up" delay={0.2} duration={0.9} distance={60}>
-            <p className="mt-8 text-xl text-white/60 max-w-3xl leading-relaxed">
-              {gap.subheadline}
-            </p>
-          </ScrollReveal>
-
-          {/* Gap Insight */}
-          <ScrollReveal direction="up" delay={0.35} duration={1} distance={70}>
-            <div className="mt-12 border-l-4 border-sunflower pl-8 py-2">
-              <h3 className="font-lora italic font-semibold text-2xl sm:text-3xl text-sunflower leading-snug tracking-[-0.02em]">
-                {gapInsight.headline}
-              </h3>
-              <p className="mt-4 text-white/60 leading-relaxed max-w-2xl">
-                {gapInsight.body}
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Gap Stats */}
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8">
-            {gapStats.map((stat, i) => (
-              <ScrollReveal key={i} direction="up" delay={0.4 + i * 0.15} duration={1} distance={70}>
-                <div className="text-center">
-                  <p className="font-work-sans font-bold text-5xl sm:text-6xl md:text-7xl tabular-nums text-sunflower leading-none">
-                    {stat.value}
-                  </p>
-                  <p className="text-sm text-white/60 mt-4 leading-snug max-w-[200px] mx-auto">
-                    {stat.label}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════
           SECTION 5 - SOLUTION (Floral White)
           ═══════════════════════════════════════════════════════ */}
       <section className="snap-start min-h-screen relative flex flex-col justify-center bg-floral-white text-charcoal px-6 sm:px-12 lg:px-20 py-24 overflow-hidden">
@@ -490,52 +436,6 @@ export default function ImmersivePage() {
                       {stat.sublabel}
                     </p>
                   )}
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════
-          EXECUTIVE PERSPECTIVE (Marine Green)
-          ═══════════════════════════════════════════════════════ */}
-      <section className="snap-start min-h-screen relative flex flex-col justify-center bg-marine-green text-white px-6 sm:px-12 lg:px-20 py-24 overflow-hidden">
-        <BackgroundBeams className="opacity-20" />
-        <ParallaxLayer containerRef={scrollRef} speed={0.2} className="hidden md:block absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-sunflower/5 blur-3xl">
-          <div className="w-full h-full" />
-        </ParallaxLayer>
-
-        <div className="max-w-4xl mx-auto w-full relative z-10">
-          <ScrollReveal direction="up" duration={0.9} distance={60}>
-            <p className="text-sm uppercase tracking-[0.2em] text-lime-green font-semibold mb-4">
-              Executive Perspective
-            </p>
-            <h2 className="font-lora italic font-semibold text-5xl sm:text-6xl md:text-7xl text-white leading-tight tracking-[-0.02em] mb-16">
-              From the people who&apos;ve seen the data
-            </h2>
-          </ScrollReveal>
-
-          <div className="space-y-12">
-            {executiveQuotes.map((eq, i) => (
-              <ScrollReveal key={i} direction="up" delay={0.2 + i * 0.2} duration={1.2} distance={80}>
-                <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-10 sm:p-14 border border-white/10">
-                  {eq.context && (
-                    <p className="text-xs uppercase tracking-[0.2em] text-white/40 font-work-sans mb-4">
-                      {eq.context}
-                    </p>
-                  )}
-                  <blockquote className="text-xl sm:text-2xl text-white/90 leading-relaxed font-lora italic">
-                    {eq.quote}
-                  </blockquote>
-                  <div className="mt-8">
-                    <cite className="not-italic font-work-sans font-semibold text-sm text-sunflower">
-                      {eq.attribution}
-                    </cite>
-                    <p className="text-xs text-white/50 font-work-sans">
-                      {eq.role}, {eq.company}
-                    </p>
-                  </div>
                 </div>
               </ScrollReveal>
             ))}

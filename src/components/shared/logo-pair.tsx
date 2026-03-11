@@ -12,9 +12,9 @@ const kareheroLogos = {
 };
 
 const sizes = {
-  sm: { kh: { w: 120, h: 32 }, tfl: { w: 80, h: 32 } },
-  md: { kh: { w: 150, h: 40 }, tfl: { w: 100, h: 40 } },
-  lg: { kh: { w: 180, h: 48 }, tfl: { w: 120, h: 48 } },
+  sm: { kh: { w: 90, h: 24 }, tfl: { w: 60, h: 24 }, cls: "h-5 sm:h-6" },
+  md: { kh: { w: 110, h: 30 }, tfl: { w: 75, h: 30 }, cls: "h-6 sm:h-8" },
+  lg: { kh: { w: 140, h: 36 }, tfl: { w: 95, h: 36 }, cls: "h-6 sm:h-9" },
 };
 
 export function LogoPair({
@@ -31,7 +31,7 @@ export function LogoPair({
         alt="KareHero"
         width={s.kh.w}
         height={s.kh.h}
-        className="h-6 w-auto sm:h-auto"
+        className={`${s.cls} w-auto`}
       />
       <div className="w-px h-4 sm:h-6 bg-current opacity-20" />
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -40,7 +40,7 @@ export function LogoPair({
         alt="Transport for London"
         width={s.tfl.w}
         height={s.tfl.h}
-        className="h-6 w-auto sm:h-auto"
+        className={`${s.cls} w-auto`}
       />
     </div>
   );
