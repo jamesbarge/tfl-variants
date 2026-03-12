@@ -37,7 +37,7 @@ export function CTAButton({
     <Link
       href={href ?? mailtoHref}
       className={cn(
-        "inline-block max-w-full font-work-sans font-semibold rounded-lg transition-colors shadow-sm text-center",
+        "block w-full sm:inline-block sm:w-auto max-w-full font-work-sans font-semibold rounded-lg transition-colors shadow-sm text-center",
         variants[variant],
         sizeClasses[size],
         className
