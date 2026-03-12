@@ -1,8 +1,6 @@
 /**
- * Centralized image URLs for TfL landing page variants.
- * Using Unsplash/Pexels images, free for commercial use, no attribution required.
- *
- * For production: download these images to /public/images/ and update paths.
+ * Centralized image paths for TfL landing page variants.
+ * Brand-approved photos provided by Jess, stored in /public/images/.
  */
 
 export type PageImage = {
@@ -20,26 +18,26 @@ export const heroImage: PageImage = {
   height: 800,
 };
 
-/** Adult daughter helping elderly mother with phone in sunny park */
+/** Young man with arm around elderly grandmother, warm and smiling */
 export const caseStudyImage: PageImage = {
-  src: "https://images.pexels.com/photos/3791666/pexels-photo-3791666.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  alt: "A daughter sitting with her elderly mother on a park bench, helping her with a mobile phone on a sunny day",
-  width: 1200,
-  height: 800,
+  src: "/images/casestudy-split.jpg",
+  alt: "A young man with his arm around his elderly grandmother, both smiling warmly",
+  width: 1000,
+  height: 704,
 };
 
-/** Caregiver assisting elderly man with medication in a warm, sunlit living room */
+/** Two men in a professional workplace discussion */
 export const solutionImage: PageImage = {
-  src: "https://images.pexels.com/photos/7551668/pexels-photo-7551668.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  alt: "A caregiver assists an elderly man with medication in a warm, sunlit living room",
-  width: 1200,
-  height: 800,
+  src: "/images/solution-split.jpg",
+  alt: "Two professionals in an engaged workplace discussion, one guiding the other through a plan",
+  width: 1509,
+  height: 896,
 };
 
-/** Caregiver supporting an elderly person, warm authentic moment */
+/** Younger man with arm around elderly father, both looking out a window */
 export const caregivingImage: PageImage = {
-  src: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1600&q=80",
-  alt: "A caregiver providing warm, hands-on support to an elderly family member",
-  width: 1600,
-  height: 1067,
+  src: "/images/employees-split.jpg",
+  alt: "A son with his arm around his elderly father, both looking out a window together",
+  width: 1656,
+  height: 756,
 };
