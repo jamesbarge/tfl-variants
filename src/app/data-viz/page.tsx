@@ -331,14 +331,16 @@ export default function DataVizPage() {
 
       {/* ───────────── CAREGIVING IMAGE ───────────── */}
       <ScrollReveal direction="up">
-        <div className="relative w-full aspect-[21/9] overflow-hidden">
-          <Image
-            src={caregivingImage.src}
-            alt={caregivingImage.alt}
-            width={caregivingImage.width}
-            height={caregivingImage.height}
-            className="object-cover w-full h-full"
-          />
+        <div className="px-6 sm:px-12 lg:px-20">
+          <div className="relative max-w-6xl mx-auto rounded-2xl overflow-hidden aspect-[16/9] border border-gardenia shadow-sm">
+            <Image
+              src={caregivingImage.src}
+              alt={caregivingImage.alt}
+              width={caregivingImage.width}
+              height={caregivingImage.height}
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
       </ScrollReveal>
 

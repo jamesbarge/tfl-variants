@@ -38,8 +38,8 @@ export const solutionImage: PageImage = {
 
 /** Caregiver supporting an elderly person, warm authentic moment */
 export const caregivingImage: PageImage = {
-  src: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1200&q=80",
+  src: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1600&q=80",
   alt: "A caregiver providing warm, hands-on support to an elderly family member",
-  width: 1200,
-  height: 800,
+  width: 1600,
+  height: 1067,
 };
