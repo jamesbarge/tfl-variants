@@ -1,0 +1,789 @@
+{
+  "__gallery": {
+    "title": "3 Ways to Tell the Same Story",
+    "cardCount": 3,
+    "allLinks": [
+      {
+        "href": "https://tfl-variants.vercel.app/data-viz",
+        "text": "HighData VisualisationAnimated counters as heroes, SVG circu"
+      },
+      {
+        "href": "https://tfl-variants.vercel.app/brutalist",
+        "text": "Low-MedBrutalistOversized type, thick borders, no border-rad"
+      },
+      {
+        "href": "https://tfl-variants.vercel.app/hybrid",
+        "text": "MediumSplit + Editorial Hybrid50/50 split-screen layouts for"
+      }
+    ],
+    "retiredLinks": [],
+    "hasDataViz": true,
+    "hasBrutalist": true,
+    "hasHybrid": true
+  },
+  "data-viz": {
+    "screenshots": [
+      "data-viz/data-viz-desktop-full.png",
+      "data-viz/data-viz-desktop-viewport.png",
+      "data-viz/data-viz-section-0.png",
+      "data-viz/data-viz-section-1.png",
+      "data-viz/data-viz-section-2.png",
+      "data-viz/data-viz-section-3.png",
+      "data-viz/data-viz-section-4.png",
+      "data-viz/data-viz-section-5.png",
+      "data-viz/data-viz-tablet-full.png",
+      "data-viz/data-viz-tablet-viewport.png",
+      "data-viz/data-viz-mobile-full.png",
+      "data-viz/data-viz-mobile-viewport.png",
+      "data-viz/data-viz-cta-before-hover.png",
+      "data-viz/data-viz-cta-after-hover.png",
+      "data-viz/data-viz-scrolled-bottom.png"
+    ],
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "ctaButtons": [
+      {
+        "text": "Book a Care Impact Assessment",
+        "tag": "A",
+        "href": "mailto:stephanie@karehero.com?subject=Care%20Impact%20Assessment%20for%20Transport%20for%20London&body=Hi%20Stephanie%2C%0A%0AI%27d%20like%20to%20book%20a%20Care%20Impact%20Assessment%20for%20Transport%20for%20London.%0A%0AThanks",
+        "visible": true,
+        "bgColor": "rgb(234, 100, 48)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "fontFamily": "\"Work Sans\", \"Work Sans Fallback\"",
+        "width": 301.453125,
+        "height": 48
+      },
+      {
+        "text": "Book a Care Impact Assessment",
+        "tag": "A",
+        "href": "mailto:stephanie@karehero.com?subject=Care%20Impact%20Assessment%20for%20Transport%20for%20London&body=Hi%20Stephanie%2C%0A%0AI%27d%20like%20to%20book%20a%20Care%20Impact%20Assessment%20for%20Transport%20for%20London.%0A%0AThanks",
+        "visible": true,
+        "bgColor": "rgb(255, 255, 255)",
+        "color": "rgb(234, 100, 48)",
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "fontFamily": "\"Work Sans\", \"Work Sans Fallback\"",
+        "width": 349.140625,
+        "height": 60
+      }
+    ],
+    "interactiveElements": [
+      {
+        "type": "cta-hover",
+        "text": "Book a Care Impact Assessment",
+        "status": "tested"
+      }
+    ],
+    "fontCheck": {
+      "allFonts": [
+        "\"Times New Roman\"",
+        "\"Work Sans\", \"Work Sans Fallback\"",
+        "Lora, \"Lora Fallback\""
+      ],
+      "loraPresent": true,
+      "workSansPresent": true
+    },
+    "colorCheck": {
+      "bodyBg": "#FFFCF5",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Estimated 5,500 carers at TfL",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H2",
+          "text": "Caregiving is costing TfL more than you think",
+          "color": "#00433D",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H2",
+          "text": "Your people face unique challenges",
+          "color": "#00433D",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Shift Patterns",
+          "color": "#00433D",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Frontline Roles",
+          "color": "#00433D",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Distributed Workforce",
+          "color": "#00433D",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Retention at Risk",
+          "color": "#00433D",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H2",
+          "text": "Care Simplified",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Dedicated Care Advisor",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Care Assessments & Plans",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        }
+      ],
+      "buttons": [],
+      "sections": [
+        {
+          "index": 0,
+          "bgColor": "#00433D",
+          "className": "relative min-h-[80vh] flex flex-col items-center justify-center px-6 py-20 overflow-hidden bg-marine"
+        },
+        {
+          "index": 1,
+          "bgColor": "#000000",
+          "className": "px-6 sm:px-12 lg:px-20 py-20 sm:py-28"
+        },
+        {
+          "index": 2,
+          "bgColor": "#F0EAE0",
+          "className": "px-6 sm:px-12 lg:px-20 py-20 sm:py-28 bg-gardenia"
+        },
+        {
+          "index": 3,
+          "bgColor": "#00433D",
+          "className": "px-6 sm:px-12 lg:px-20 py-20 sm:py-28 bg-marine-green text-white"
+        },
+        {
+          "index": 4,
+          "bgColor": "#000000",
+          "className": "px-6 sm:px-12 lg:px-20 py-20 sm:py-28"
+        },
+        {
+          "index": 5,
+          "bgColor": "lab(59.5452 50.9921 54.4415 / 0.05)",
+          "className": "px-6 sm:px-12 lg:px-20 py-20 sm:py-28 bg-coral/5"
+        }
+      ]
+    },
+    "sectionCheck": {
+      "hasHero": true,
+      "hasProblem": true,
+      "hasProblemStats": false,
+      "hasEmployees": true,
+      "hasGap": false,
+      "hasSolution": true,
+      "hasProof": true,
+      "hasTestimonials": true,
+      "hasCTA": true,
+      "hasLogo": true,
+      "hasClientLogos": true,
+      "hasCalendarBooking": false,
+      "hasCarersPassport": true,
+      "hasStaffNetwork": true,
+      "tflCasingIssues": {
+        "badTFL": 0,
+        "goodTfL": 9
+      },
+      "hasCalendlyLink": false,
+      "calendlyHref": null,
+      "totalSections": 6,
+      "pageTitle": "KareHero for Transport for London | Care Support for Your Workforce",
+      "headerLogoHeight": [
+        {
+          "src": "logo-lockup-coral.svg",
+          "naturalHeight": 135,
+          "renderedHeight": 32,
+          "renderedWidth": 216.875
+        },
+        {
+          "src": "tfl-logo.svg",
+          "naturalHeight": 92,
+          "renderedHeight": 40,
+          "renderedWidth": 130.546875
+        }
+      ],
+      "hasRemovedCaseStudyContent": {
+        "has62Percent": false,
+        "has686K": false,
+        "hasSydneySamuels": false,
+        "hasExecutivePerspective": false
+      }
+    },
+    "networkErrors": [
+      "[desktop] https://static.hsappstatic.net/MeetingsPublic/static-1.59168/html/public-$hublet.html - net::ERR_BLOCKED_BY_ORB",
+      "[desktop] https://static.hsappstatic.net/MeetingsPublic/static-1.59168/html/public-$hublet.html - net::ERR_BLOCKED_BY_ORB",
+      "[desktop] https://static.hsappstatic.net/MeetingsPublic/static-1.59168/html/public-$hublet.html - net::ERR_BLOCKED_BY_ORB",
+      "[desktop] https://static.hsappstatic.net/MeetingsPublic/static-1.59168/html/public-$hublet.html - net::ERR_BLOCKED_BY_ORB",
+      "[tablet] https://static.hsappstatic.net/MeetingsPublic/static-1.59168/html/public-$hublet.html - net::ERR_BLOCKED_BY_ORB",
+      "[tablet] https://static.hsappstatic.net/MeetingsPublic/static-1.59168/html/public-$hublet.html - net::ERR_BLOCKED_BY_ORB",
+      "[mobile] https://static.hsappstatic.net/MeetingsPublic/static-1.59168/html/public-$hublet.html - net::ERR_BLOCKED_BY_ORB",
+      "[mobile] https://static.hsappstatic.net/MeetingsPublic/static-1.59168/html/public-$hublet.html - net::ERR_BLOCKED_BY_ORB"
+    ],
+    "testimonialCheck": {
+      "hasBAEmployee": true,
+      "hasBAMention": true,
+      "hasCareExpert": true,
+      "hasRecommend": true,
+      "hasGameChanger": false,
+      "hasTFLAttribution": false
+    },
+    "overflowIssues": []
+  },
+  "brutalist": {
+    "screenshots": [
+      "brutalist/brutalist-desktop-full.png",
+      "brutalist/brutalist-desktop-viewport.png",
+      "brutalist/brutalist-section-0.png",
+      "brutalist/brutalist-section-1.png",
+      "brutalist/brutalist-section-2.png",
+      "brutalist/brutalist-section-3.png",
+      "brutalist/brutalist-section-4.png",
+      "brutalist/brutalist-section-5.png",
+      "brutalist/brutalist-tablet-full.png",
+      "brutalist/brutalist-tablet-viewport.png",
+      "brutalist/brutalist-mobile-full.png",
+      "brutalist/brutalist-mobile-viewport.png",
+      "brutalist/brutalist-cta-before-hover.png",
+      "brutalist/brutalist-cta-after-hover.png",
+      "brutalist/brutalist-scrolled-bottom.png"
+    ],
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "ctaButtons": [
+      {
+        "text": "Book a Care Impact Assessment",
+        "tag": "A",
+        "href": "mailto:stephanie@karehero.com?subject=Care%20Impact%20Assessment%20for%20Transport%20for%20London&body=Hi%20Stephanie%2C%0A%0AI%27d%20like%20to%20book%20a%20Care%20Impact%20Assessment%20for%20Transport%20for%20London.%0A%0AThanks",
+        "visible": true,
+        "bgColor": "rgb(234, 100, 48)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "fontFamily": "\"Work Sans\", \"Work Sans Fallback\"",
+        "width": 405.546875,
+        "height": 68
+      },
+      {
+        "text": "Book a Care Impact Assessment",
+        "tag": "A",
+        "href": "mailto:stephanie@karehero.com?subject=Care%20Impact%20Assessment%20for%20Transport%20for%20London&body=Hi%20Stephanie%2C%0A%0AI%27d%20like%20to%20book%20a%20Care%20Impact%20Assessment%20for%20Transport%20for%20London.%0A%0AThanks",
+        "visible": true,
+        "bgColor": "rgb(234, 100, 48)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "fontFamily": "\"Work Sans\", \"Work Sans Fallback\"",
+        "width": 405.546875,
+        "height": 68
+      },
+      {
+        "text": "Book directly in our calendar →",
+        "tag": "A",
+        "href": "https://calendly.com/karehero/care-impact-assessment",
+        "visible": true,
+        "bgColor": "rgba(0, 0, 0, 0)",
+        "color": "rgb(234, 100, 48)",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "fontFamily": "\"Work Sans\", \"Work Sans Fallback\"",
+        "width": 218.484375,
+        "height": 20
+      }
+    ],
+    "interactiveElements": [
+      {
+        "type": "cta-hover",
+        "text": "Book a Care Impact Assessment",
+        "status": "tested"
+      }
+    ],
+    "fontCheck": {
+      "allFonts": [
+        "\"Times New Roman\"",
+        "\"Work Sans\", \"Work Sans Fallback\"",
+        "Lora, \"Lora Fallback\""
+      ],
+      "loraPresent": true,
+      "workSansPresent": true
+    },
+    "colorCheck": {
+      "bodyBg": "#FFFCF5",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Estimated 5,500 carers at TfL",
+          "color": "#00433D",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H2",
+          "text": "Caregiving is costing TfL more than you think",
+          "color": "#EA6430",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H2",
+          "text": "Your people face unique challenges",
+          "color": "#FFDD6C",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Shift Patterns",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Frontline Roles",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Distributed Workforce",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Retention at Risk",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H2",
+          "text": "Care Simplified",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Dedicated Care Advisor",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Care Assessments & Plans",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        }
+      ],
+      "buttons": [],
+      "sections": [
+        {
+          "index": 0,
+          "bgColor": "#000000",
+          "className": "relative border-b-4 border-charcoal"
+        },
+        {
+          "index": 1,
+          "bgColor": "#000000",
+          "className": "relative border-b-4 border-charcoal"
+        },
+        {
+          "index": 2,
+          "bgColor": "#00433D",
+          "className": "relative border-b-4 border-charcoal bg-marine-green text-white"
+        },
+        {
+          "index": 3,
+          "bgColor": "#EA6430",
+          "className": "relative border-b-4 border-charcoal bg-coral text-white"
+        },
+        {
+          "index": 4,
+          "bgColor": "#000000",
+          "className": "relative border-b-4 border-charcoal"
+        },
+        {
+          "index": 5,
+          "bgColor": "#FFFCF5",
+          "className": "relative bg-floral-white"
+        }
+      ]
+    },
+    "sectionCheck": {
+      "hasHero": true,
+      "hasProblem": true,
+      "hasProblemStats": true,
+      "hasEmployees": true,
+      "hasGap": false,
+      "hasSolution": true,
+      "hasProof": true,
+      "hasTestimonials": true,
+      "hasCTA": true,
+      "hasLogo": true,
+      "hasClientLogos": true,
+      "hasCalendarBooking": true,
+      "hasCarersPassport": true,
+      "hasStaffNetwork": true,
+      "tflCasingIssues": {
+        "badTFL": 0,
+        "goodTfL": 11
+      },
+      "hasCalendlyLink": true,
+      "calendlyHref": "https://calendly.com/karehero/care-impact-assessment",
+      "totalSections": 6,
+      "pageTitle": "KareHero for Transport for London | Care Support for Your Workforce",
+      "headerLogoHeight": [
+        {
+          "src": "logo-lockup-coral.svg",
+          "naturalHeight": 135,
+          "renderedHeight": 32,
+          "renderedWidth": 216.875
+        },
+        {
+          "src": "tfl-logo.svg",
+          "naturalHeight": 92,
+          "renderedHeight": 40,
+          "renderedWidth": 130.546875
+        }
+      ],
+      "hasRemovedCaseStudyContent": {
+        "has62Percent": false,
+        "has686K": false,
+        "hasSydneySamuels": false,
+        "hasExecutivePerspective": false
+      }
+    },
+    "networkErrors": [],
+    "testimonialCheck": {
+      "hasBAEmployee": false,
+      "hasBAMention": true,
+      "hasCareExpert": true,
+      "hasRecommend": true,
+      "hasGameChanger": false,
+      "hasTFLAttribution": false
+    },
+    "overflowIssues": []
+  },
+  "hybrid": {
+    "screenshots": [
+      "hybrid/hybrid-desktop-full.png",
+      "hybrid/hybrid-desktop-viewport.png",
+      "hybrid/hybrid-section-0.png",
+      "hybrid/hybrid-section-1.png",
+      "hybrid/hybrid-section-2.png",
+      "hybrid/hybrid-section-3.png",
+      "hybrid/hybrid-section-4.png",
+      "hybrid/hybrid-section-5.png",
+      "hybrid/hybrid-section-6.png",
+      "hybrid/hybrid-tablet-full.png",
+      "hybrid/hybrid-tablet-viewport.png",
+      "hybrid/hybrid-mobile-full.png",
+      "hybrid/hybrid-mobile-viewport.png",
+      "hybrid/hybrid-cta-before-hover.png",
+      "hybrid/hybrid-cta-after-hover.png",
+      "hybrid/hybrid-scrolled-bottom.png"
+    ],
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "ctaButtons": [
+      {
+        "text": "Book a Care Impact Assessment",
+        "tag": "A",
+        "href": "mailto:stephanie@karehero.com?subject=Care%20Impact%20Assessment%20for%20Transport%20for%20London&body=Hi%20Stephanie%2C%0A%0AI%27d%20like%20to%20book%20a%20Care%20Impact%20Assessment%20for%20Transport%20for%20London.%0A%0AThanks",
+        "visible": true,
+        "bgColor": "rgb(234, 100, 48)",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "fontFamily": "\"Work Sans\", \"Work Sans Fallback\"",
+        "width": 301.453125,
+        "height": 48
+      },
+      {
+        "text": "Book a Care Impact Assessment",
+        "tag": "A",
+        "href": "mailto:stephanie@karehero.com?subject=Care%20Impact%20Assessment%20for%20Transport%20for%20London&body=Hi%20Stephanie%2C%0A%0AI%27d%20like%20to%20book%20a%20Care%20Impact%20Assessment%20for%20Transport%20for%20London.%0A%0AThanks",
+        "visible": true,
+        "bgColor": "rgb(255, 255, 255)",
+        "color": "rgb(234, 100, 48)",
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "fontFamily": "\"Work Sans\", \"Work Sans Fallback\"",
+        "width": 349.140625,
+        "height": 60
+      },
+      {
+        "text": "Book a Care Impact Assessment",
+        "tag": "A",
+        "href": "mailto:stephanie@karehero.com?subject=Care%20Impact%20Assessment%20for%20Transport%20for%20London&body=Hi%20Stephanie%2C%0A%0AI%27d%20like%20to%20book%20a%20Care%20Impact%20Assessment%20for%20Transport%20for%20London.%0A%0AThanks",
+        "visible": true,
+        "bgColor": "rgb(255, 255, 255)",
+        "color": "rgb(234, 100, 48)",
+        "fontSize": "18px",
+        "fontWeight": "600",
+        "fontFamily": "\"Work Sans\", \"Work Sans Fallback\"",
+        "width": 349.140625,
+        "height": 60
+      },
+      {
+        "text": "Book directly in our calendar →",
+        "tag": "A",
+        "href": "https://calendly.com/karehero/care-impact-assessment",
+        "visible": true,
+        "bgColor": "rgba(0, 0, 0, 0)",
+        "color": "oklab(0.999994 0.0000455677 0.0000200868 / 0.8)",
+        "fontSize": "14px",
+        "fontWeight": "600",
+        "fontFamily": "\"Work Sans\", \"Work Sans Fallback\"",
+        "width": 218.484375,
+        "height": 20
+      }
+    ],
+    "interactiveElements": [
+      {
+        "type": "cta-hover",
+        "text": "Book a Care Impact Assessment",
+        "status": "tested"
+      }
+    ],
+    "fontCheck": {
+      "allFonts": [
+        "\"Times New Roman\"",
+        "\"Work Sans\", \"Work Sans Fallback\"",
+        "Lora, \"Lora Fallback\""
+      ],
+      "loraPresent": true,
+      "workSansPresent": true
+    },
+    "colorCheck": {
+      "bodyBg": "#FFFCF5",
+      "headings": [
+        {
+          "tag": "H1",
+          "text": "Estimated 5,500 carers at TfL",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H2",
+          "text": "Caregiving is costing TfL more than you think",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H2",
+          "text": "Your people face unique challenges",
+          "color": "#00433D",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Shift Patterns",
+          "color": "#00433D",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Frontline Roles",
+          "color": "#00433D",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Distributed Workforce",
+          "color": "#00433D",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Retention at Risk",
+          "color": "#00433D",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H2",
+          "text": "Care Simplified",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Dedicated Care Advisor",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "H3",
+          "text": "Care Assessments & Plans",
+          "color": "#FFFFFF",
+          "fontFamily": "Lora, \"Lora Fallback\"",
+          "fontStyle": "italic",
+          "fontWeight": "600"
+        }
+      ],
+      "buttons": [],
+      "sections": [
+        {
+          "index": 0,
+          "bgColor": "#00433D",
+          "className": "bg-marine-green text-white py-24 md:py-32"
+        },
+        {
+          "index": 1,
+          "bgColor": "#000000",
+          "className": "flex flex-col md:flex-row overflow-hidden"
+        },
+        {
+          "index": 2,
+          "bgColor": "#000000",
+          "className": "flex flex-col md:flex-row border-t-4 border-b-4 border-sunflower overflow-hidden"
+        },
+        {
+          "index": 3,
+          "bgColor": "#00433D",
+          "className": "bg-marine-green text-white py-20 md:py-28"
+        },
+        {
+          "index": 4,
+          "bgColor": "#FFFCF5",
+          "className": "bg-floral-white py-20 md:py-28"
+        },
+        {
+          "index": 5,
+          "bgColor": "#00433D",
+          "className": "bg-marine-green text-white py-20 md:py-28"
+        },
+        {
+          "index": 6,
+          "bgColor": "#EA6430",
+          "className": "bg-coral text-white py-20 md:py-28"
+        }
+      ]
+    },
+    "sectionCheck": {
+      "hasHero": true,
+      "hasProblem": true,
+      "hasProblemStats": true,
+      "hasEmployees": true,
+      "hasGap": false,
+      "hasSolution": true,
+      "hasProof": true,
+      "hasTestimonials": true,
+      "hasCTA": true,
+      "hasLogo": true,
+      "hasClientLogos": true,
+      "hasCalendarBooking": true,
+      "hasCarersPassport": true,
+      "hasStaffNetwork": true,
+      "tflCasingIssues": {
+        "badTFL": 0,
+        "goodTfL": 11
+      },
+      "hasCalendlyLink": true,
+      "calendlyHref": "https://calendly.com/karehero/care-impact-assessment",
+      "totalSections": 7,
+      "pageTitle": "KareHero for Transport for London | Care Support for Your Workforce",
+      "headerLogoHeight": [
+        {
+          "src": "logo-lockup-coral.svg",
+          "naturalHeight": 135,
+          "renderedHeight": 32,
+          "renderedWidth": 216.875
+        },
+        {
+          "src": "tfl-logo.svg",
+          "naturalHeight": 92,
+          "renderedHeight": 40,
+          "renderedWidth": 130.546875
+        }
+      ],
+      "hasRemovedCaseStudyContent": {
+        "has62Percent": false,
+        "has686K": false,
+        "hasSydneySamuels": false,
+        "hasExecutivePerspective": false
+      }
+    },
+    "networkErrors": [],
+    "testimonialCheck": {
+      "hasBAEmployee": false,
+      "hasBAMention": true,
+      "hasCareExpert": true,
+      "hasRecommend": true,
+      "hasGameChanger": false,
+      "hasTFLAttribution": false
+    },
+    "overflowIssues": []
+  }
+}
