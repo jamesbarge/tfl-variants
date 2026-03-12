@@ -2,10 +2,10 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Script from "next/script";
 import { LogoPair } from "@/components/shared/logo-pair";
 import { CTAButton } from "@/components/shared/cta-button";
 import { ClientLogos } from "@/components/shared/client-logos";
-import { CalendarBooking } from "@/components/shared/calendar-embed";
 import { ScrollReveal, CountUp } from "@/components/motion";
 import { BackgroundBeams } from "@/components/aceternity/background-beams";
 import {
@@ -18,14 +18,11 @@ import {
   services,
   solutionFooter,
   caseStudy,
-  tflProjection,
   testimonialSection,
   ctaSection,
   footer,
-  calendarBookingUrl,
 } from "@/lib/content/tfl";
 import {
-  problemStats,
   baChallengeStats,
   baResultStats,
   tflProjectionStats,
@@ -33,79 +30,6 @@ import {
 import { testimonials } from "@/lib/content/testimonials";
 import { caseStudyImage, caregivingImage, solutionImage } from "@/lib/content/images";
 import Image from "next/image";
-
-/* ─── SVG Circular Progress Ring ─── */
-function ProgressRing({
-  percentage,
-  color = "#EA6430",
-  trackColor = "#F0EAE0",
-  size = 120,
-  strokeWidth = 8,
-  label,
-  sublabel,
-  className = "",
-}: {
-  percentage: number;
-  color?: string;
-  trackColor?: string;
-  size?: number;
-  strokeWidth?: number;
-  label: string;
-  sublabel?: string;
-  className?: string;
-}) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-60px" });
-  const circumference = 2 * Math.PI * 45;
-  const dashArray = (percentage / 100) * circumference;
-
-  return (
-    <div ref={ref} className={`flex flex-col items-center gap-3 ${className}`}>
-      <div className="relative" style={{ width: size, height: size }}>
-        <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-          <circle
-            cx="50"
-            cy="50"
-            r="45"
-            fill="none"
-            stroke={trackColor}
-            strokeWidth={strokeWidth}
-          />
-          <motion.circle
-            cx="50"
-            cy="50"
-            r="45"
-            fill="none"
-            stroke={color}
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeDasharray={circumference}
-            initial={{ strokeDashoffset: circumference }}
-            animate={
-              isInView
-                ? { strokeDashoffset: circumference - dashArray }
-                : { strokeDashoffset: circumference }
-            }
-            transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-          />
-        </svg>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="font-work-sans font-semibold text-2xl tabular-nums text-charcoal">
-            {percentage}%
-          </span>
-        </div>
-      </div>
-      <p className="text-sm text-charcoal/70 text-center max-w-[180px] leading-snug">
-        {label}
-      </p>
-      {sublabel && (
-        <p className="text-xs text-charcoal/50 text-center max-w-[180px]">
-          {sublabel}
-        </p>
-      )}
-    </div>
-  );
-}
 
 /* ─── Stat Card ─── */
 function StatCard({
@@ -241,11 +165,12 @@ function parseStatValue(value: string): { num: number; prefix: string; suffix: s
   return { num: 0, prefix: "", suffix: "", decimals: 0 };
 }
 
-const ringColors = ["#EA6430", "#00433D", "#EC9044", "#9681EA", "#732F4A"];
-
 export default function DataVizPage() {
   return (
     <div className="min-h-screen bg-floral-white text-charcoal font-work-sans">
+      {/* HubSpot Meetings Embed Script */}
+      <Script src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js" strategy="lazyOnload" />
+
       {/* ───────────── HEADER ───────────── */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gardenia px-6 sm:px-12 py-4 flex items-center justify-between">
         <LogoPair kareheroVariant="coral" size="md" />
@@ -293,7 +218,7 @@ export default function DataVizPage() {
         </div>
       </section>
 
-      {/* ───────────── PROBLEM - Ring Charts ───────────── */}
+      {/* ───────────── PROBLEM - TfL Projection Stats ───────────── */}
       <section className="px-6 sm:px-12 lg:px-20 py-20 sm:py-28">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal direction="up">
@@ -310,55 +235,72 @@ export default function DataVizPage() {
             </p>
           </ScrollReveal>
 
-          {/* Problem Stats as Ring Charts */}
-          <div className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
-            {problemStats.map((stat, i) => {
-              const pct = parseFloat(stat.value.replace(/[^0-9.]/g, ""));
+          {/* TfL-specific projection stats */}
+          <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-5">
+            {tflProjectionStats.map((stat, i) => {
+              const parsed = parseStatValue(stat.value);
               return (
-                <ProgressRing
-                  key={i}
-                  percentage={pct}
-                  color={ringColors[i % ringColors.length]}
-                  label={stat.label}
-                  sublabel={stat.sublabel}
-                  size={130}
-                />
+                <ScrollReveal key={i} direction="up" delay={i * 0.1}>
+                  <div className="bg-marine-green rounded-2xl p-8 text-center text-white">
+                    {parsed.num > 0 ? (
+                      <CountUp
+                        end={parsed.num}
+                        prefix={parsed.prefix}
+                        suffix={parsed.suffix}
+                        decimals={parsed.decimals}
+                        duration={2}
+                        className="font-work-sans font-bold text-4xl sm:text-5xl tabular-nums text-sunflower"
+                      />
+                    ) : (
+                      <p className="font-work-sans font-bold text-4xl sm:text-5xl tabular-nums text-sunflower">
+                        {stat.value}
+                      </p>
+                    )}
+                    <p className="text-sm text-white/80 mt-3">{stat.label}</p>
+                    {stat.sublabel && (
+                      <p className="text-xs text-white/50 mt-1">
+                        {stat.sublabel}
+                      </p>
+                    )}
+                  </div>
+                </ScrollReveal>
               );
             })}
           </div>
         </div>
       </section>
 
-      {/* ───────────── CAREGIVING IMAGE ───────────── */}
-      <ScrollReveal direction="up">
-        <div className="px-6 sm:px-12 lg:px-20">
-          <div className="relative max-w-6xl mx-auto rounded-2xl overflow-hidden aspect-[16/9] border border-gardenia shadow-sm">
-            <Image
-              src={caregivingImage.src}
-              alt={caregivingImage.alt}
-              width={caregivingImage.width}
-              height={caregivingImage.height}
-              className="object-cover w-full h-full"
-            />
-          </div>
-        </div>
-      </ScrollReveal>
-
-      {/* ───────────── EMPLOYEES - Icon Cards ───────────── */}
+      {/* ───────────── EMPLOYEES - Split-screen intro + Icon Cards ───────────── */}
       <section className="px-6 sm:px-12 lg:px-20 py-20 sm:py-28 bg-gardenia">
         <div className="max-w-6xl mx-auto">
-          <ScrollReveal direction="up">
-            <h2 className="font-lora italic font-semibold text-4xl sm:text-5xl text-marine-green leading-tight tracking-[-0.02em]">
-              {employees.headline}
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal direction="up" delay={0.1}>
-            <p className="mt-4 text-lg text-charcoal/70 max-w-3xl">
-              {employees.subheadline}
-            </p>
-          </ScrollReveal>
+          {/* Split-screen: Image + Headline */}
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center mb-12">
+            <div className="w-full lg:w-1/2">
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/5]">
+                <Image
+                  src={caregivingImage.src}
+                  alt={caregivingImage.alt}
+                  width={caregivingImage.width}
+                  height={caregivingImage.height}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            </div>
+            <div className="w-full lg:w-1/2">
+              <ScrollReveal direction="up">
+                <h2 className="font-lora italic font-semibold text-4xl sm:text-5xl text-marine-green leading-tight tracking-[-0.02em]">
+                  {employees.headline}
+                </h2>
+              </ScrollReveal>
+              <ScrollReveal direction="up" delay={0.1}>
+                <p className="mt-4 text-lg text-charcoal/70">
+                  {employees.subheadline}
+                </p>
+              </ScrollReveal>
+            </div>
+          </div>
 
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {challenges.map((challenge, i) => (
               <ScrollReveal key={i} direction="up" delay={i * 0.1}>
                 <div className="bg-white rounded-2xl p-8 shadow-sm border border-gardenia hover:shadow-md transition-shadow h-full">
@@ -393,39 +335,44 @@ export default function DataVizPage() {
         </div>
       </section>
 
-      {/* ───────────── SOLUTION - Service Grid ───────────── */}
+      {/* ───────────── SOLUTION - Split-screen intro + Service Grid ───────────── */}
       <section className="px-6 sm:px-12 lg:px-20 py-20 sm:py-28 bg-marine-green text-white">
         <div className="max-w-6xl mx-auto">
-          {solution.label && (
-            <ScrollReveal direction="up">
-              <p className="text-sm uppercase tracking-[0.2em] text-lime-green font-semibold mb-3">
-                {solution.label}
-              </p>
-            </ScrollReveal>
-          )}
-          <ScrollReveal direction="up" delay={0.05}>
-            <h2 className="font-lora italic font-semibold text-5xl sm:text-6xl text-white leading-tight tracking-[-0.02em]">
-              {solution.headline}
-            </h2>
-          </ScrollReveal>
-          <ScrollReveal direction="up" delay={0.1}>
-            <p className="mt-4 text-lg text-white/70 max-w-3xl">
-              {solution.subheadline}
-            </p>
-          </ScrollReveal>
-
-          {/* Solution Image */}
-          <ScrollReveal direction="up" delay={0.15}>
-            <div className="mt-10 relative rounded-2xl overflow-hidden aspect-[21/9] border border-white/10">
-              <Image
-                src={solutionImage.src}
-                alt={solutionImage.alt}
-                width={solutionImage.width}
-                height={solutionImage.height}
-                className="object-cover w-full h-full"
-              />
+          {/* Split-screen: Text + Image */}
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+            <div className="w-full lg:w-1/2">
+              {solution.label && (
+                <ScrollReveal direction="up">
+                  <p className="text-sm uppercase tracking-[0.2em] text-lime-green font-semibold mb-3">
+                    {solution.label}
+                  </p>
+                </ScrollReveal>
+              )}
+              <ScrollReveal direction="up" delay={0.05}>
+                <h2 className="font-lora italic font-semibold text-5xl sm:text-6xl text-white leading-tight tracking-[-0.02em]">
+                  {solution.headline}
+                </h2>
+              </ScrollReveal>
+              <ScrollReveal direction="up" delay={0.1}>
+                <p className="mt-4 text-lg text-white/70">
+                  {solution.subheadline}
+                </p>
+              </ScrollReveal>
             </div>
-          </ScrollReveal>
+            <div className="w-full lg:w-1/2">
+              <ScrollReveal direction="up" delay={0.15}>
+                <div className="relative rounded-2xl overflow-hidden aspect-[4/5] border border-white/10">
+                  <Image
+                    src={solutionImage.src}
+                    alt={solutionImage.alt}
+                    width={solutionImage.width}
+                    height={solutionImage.height}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
 
           <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((service, i) => (
@@ -523,93 +470,43 @@ export default function DataVizPage() {
             </div>
           </div>
 
-          <ScrollReveal direction="up" delay={0.2}>
-            <div className="mt-10 relative rounded-2xl overflow-hidden aspect-[21/9] border border-gardenia">
-              <Image
-                src={caseStudyImage.src}
-                alt={caseStudyImage.alt}
-                width={caseStudyImage.width}
-                height={caseStudyImage.height}
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </ScrollReveal>
-
-          {/* Single Testimonial */}
+          {/* Split-screen: Case study image + Testimonial */}
           {testimonials[0] && (
-            <ScrollReveal direction="up" delay={0.2}>
-              <div className="mt-10 bg-gardenia rounded-2xl p-8 sm:p-10">
-                <svg className="w-8 h-8 text-coral/30 mb-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11h4v10H0z" />
-                </svg>
-                <blockquote className="text-lg text-charcoal/80 leading-relaxed">
-                  {testimonials[0].quote}
-                </blockquote>
-                <cite className="block mt-5 text-sm text-charcoal/50 not-italic">
-                  - {testimonials[0].attribution}
-                </cite>
+            <div className="mt-10 flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+              <div className="w-full lg:w-1/2">
+                <ScrollReveal direction="up" delay={0.1}>
+                  <div className="relative rounded-2xl overflow-hidden aspect-[4/5] border border-gardenia">
+                    <Image
+                      src={caseStudyImage.src}
+                      alt={caseStudyImage.alt}
+                      width={caseStudyImage.width}
+                      height={caseStudyImage.height}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                </ScrollReveal>
               </div>
-            </ScrollReveal>
-          )}
-
-          {/* TfL Projections */}
-          <div className="mt-14">
-            <ScrollReveal direction="up">
-              <p className="text-sm uppercase tracking-[0.2em] text-coral font-semibold mb-2">
-                {tflProjection.label}
-              </p>
-              <h3 className="font-lora italic font-semibold text-4xl sm:text-5xl text-marine-green tracking-[-0.02em] mb-4">
-                {tflProjection.headline}
-              </h3>
-            </ScrollReveal>
-            <ScrollReveal direction="up" delay={0.05}>
-              <p className="text-lg text-charcoal/70 max-w-3xl mb-8">
-                {tflProjection.body}
-              </p>
-            </ScrollReveal>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-              {tflProjectionStats.map((stat, i) => {
-                const parsed = parseStatValue(stat.value);
-                return (
-                  <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                    <div className="bg-marine-green rounded-2xl p-8 text-center text-white">
-                      {parsed.num > 0 ? (
-                        <CountUp
-                          end={parsed.num}
-                          prefix={parsed.prefix}
-                          suffix={parsed.suffix}
-                          decimals={parsed.decimals}
-                          duration={2}
-                          className="font-work-sans font-bold text-4xl sm:text-5xl tabular-nums text-sunflower"
-                        />
-                      ) : (
-                        <p className="font-work-sans font-bold text-4xl sm:text-5xl tabular-nums text-sunflower">
-                          {stat.value}
-                        </p>
-                      )}
-                      <p className="text-sm text-white/80 mt-3">{stat.label}</p>
-                      {stat.sublabel && (
-                        <p className="text-xs text-white/50 mt-1">
-                          {stat.sublabel}
-                        </p>
-                      )}
-                    </div>
-                  </ScrollReveal>
-                );
-              })}
+              <div className="w-full lg:w-1/2">
+                <ScrollReveal direction="up" delay={0.2}>
+                  <div className="bg-gardenia rounded-2xl p-8 sm:p-10">
+                    <svg className="w-8 h-8 text-coral/30 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11h4v10H0z" />
+                    </svg>
+                    <blockquote className="text-lg text-charcoal/80 leading-relaxed">
+                      {testimonials[0].quote}
+                    </blockquote>
+                    <cite className="block mt-5 text-sm text-charcoal/50 not-italic">
+                      - {testimonials[0].attribution}
+                    </cite>
+                  </div>
+                </ScrollReveal>
+              </div>
             </div>
-
-            {/* Client Logos */}
-            <ScrollReveal direction="up" delay={0.3}>
-              <div className="mt-12">
-                <ClientLogos variant="light" />
-              </div>
-            </ScrollReveal>
-          </div>
+          )}
         </div>
       </section>
 
-      {/* ───────────── CTA + FOOTER ───────────── */}
+      {/* ───────────── CTA + HUBSPOT CALENDAR ───────────── */}
       <section className="px-6 sm:px-12 lg:px-20 py-20 sm:py-28 bg-coral/5">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal direction="up">
@@ -633,12 +530,20 @@ export default function DataVizPage() {
             </ul>
           </ScrollReveal>
 
+          {/* HubSpot Calendar Embed */}
           <ScrollReveal direction="up" delay={0.3}>
             <div className="mt-10">
-              <CTAButton variant="coral" size="lg" />
+              <div
+                className="meetings-iframe-container"
+                data-src="https://meetings-eu1.hubspot.com/becci-gill?embed=true"
+              />
             </div>
-            <div className="mt-4">
-              <CalendarBooking url={calendarBookingUrl} className="text-coral" />
+          </ScrollReveal>
+
+          {/* Client Logos */}
+          <ScrollReveal direction="up" delay={0.4}>
+            <div className="mt-12">
+              <ClientLogos variant="light" />
             </div>
           </ScrollReveal>
         </div>
