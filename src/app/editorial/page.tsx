@@ -40,7 +40,7 @@ export default function EditorialPage() {
       <header className="border-b border-gardenia">
         <div className="max-w-7xl mx-auto px-4 py-3 sm:px-6 sm:py-4 flex items-center justify-between gap-3">
           <LogoPair kareheroVariant="coral" size="md" />
-          <CTAButton variant="coral" size="md" />
+          <CTAButton variant="coral" size="md" className="hidden sm:inline-block" />
         </div>
       </header>
 

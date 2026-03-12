@@ -81,7 +81,7 @@ export default function GlassmorphismPage() {
       <header className="sticky top-0 z-50 bg-white/70 backdrop-blur-xl border-b border-white/40 shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <LogoPair kareheroVariant="coral" size="sm" />
-          <CTAButton variant="coral" size="md" />
+          <CTAButton variant="coral" size="md" className="hidden sm:inline-block" />
         </div>
       </header>
 
