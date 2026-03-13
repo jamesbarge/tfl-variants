@@ -174,7 +174,7 @@ export default function DataVizPage() {
       {/* ───────────── HEADER ───────────── */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gardenia px-6 sm:px-12 py-4 flex items-center justify-between">
         <LogoPair kareheroVariant="coral" size="md" />
-        <CTAButton variant="coral" size="md" className="hidden sm:inline-block" />
+        <CTAButton variant="coral" size="md" className="hidden sm:inline-block" href="#calendar" />
       </header>
 
       {/* ───────────── HERO - Giant Animated Counter ───────────── */}
@@ -212,7 +212,7 @@ export default function DataVizPage() {
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.5} duration={0.6}>
             <div className="mt-10">
-              <CTAButton variant="white" size="lg" />
+              <CTAButton variant="white" size="lg" href="#calendar" />
             </div>
           </ScrollReveal>
         </div>
@@ -507,7 +507,7 @@ export default function DataVizPage() {
       </section>
 
       {/* ───────────── CTA + HUBSPOT CALENDAR ───────────── */}
-      <section className="px-6 sm:px-12 lg:px-20 py-20 sm:py-28 bg-coral/5">
+      <section id="calendar" className="px-6 sm:px-12 lg:px-20 py-20 sm:py-28 bg-coral/5">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal direction="up">
             <h2 className="font-lora italic font-semibold text-4xl sm:text-5xl md:text-6xl text-marine-green leading-tight tracking-[-0.02em]">

@@ -11,8 +11,6 @@ export const ctaText = "Book a Care Impact Assessment";
 export const mailtoHref =
   "mailto:stephanie@karehero.com?subject=Care%20Impact%20Assessment%20for%20Transport%20for%20London&body=Hi%20Stephanie%2C%0A%0AI'd%20like%20to%20book%20a%20Care%20Impact%20Assessment%20for%20Transport%20for%20London.%0A%0AThanks";
 
-export const calendarBookingUrl =
-  "https://calendly.com/karehero/care-impact-assessment";
 
 export const contactEmails = [
   "stephanie@karehero.com",

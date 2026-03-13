@@ -1,10 +1,10 @@
 "use client";
 
+import Script from "next/script";
 import { LogoPair } from "@/components/shared/logo-pair";
 import { CTAButton } from "@/components/shared/cta-button";
 import { StatCounter } from "@/components/shared/stat-counter";
 import { ClientLogos } from "@/components/shared/client-logos";
-import { CalendarBooking } from "@/components/shared/calendar-embed";
 import { ScrollReveal } from "@/components/motion";
 import {
   hero,
@@ -20,7 +20,6 @@ import {
   testimonialSection,
   ctaSection,
   footer,
-  calendarBookingUrl,
 } from "@/lib/content/tfl";
 import {
   problemStats,
@@ -68,6 +67,7 @@ export default function BrutalistPage() {
                 <CTAButton
                   variant="coral"
                   size="lg"
+                  href="#calendar"
                   className="rounded-none border-4 border-charcoal shadow-[8px_8px_0px_#404042] hover:shadow-[4px_4px_0px_#404042] hover:translate-x-[4px] hover:translate-y-[4px] transition-all uppercase tracking-wide"
                 />
               </div>
@@ -383,8 +383,9 @@ export default function BrutalistPage() {
         </div>
       </section>
 
-      {/* ───────────── CTA + FOOTER ───────────── */}
-      <section className="relative bg-floral-white">
+      {/* ───────────── CTA + HUBSPOT CALENDAR ───────────── */}
+      <section id="calendar" className="relative bg-floral-white">
+        <Script src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js" strategy="lazyOnload" />
         <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr]">
           <div className="hidden lg:flex items-center justify-center border-r-4 border-charcoal w-16">
             <span className="block -rotate-90 whitespace-nowrap uppercase text-xs tracking-[0.3em] font-bold text-charcoal/40">
@@ -418,14 +419,10 @@ export default function BrutalistPage() {
             </ScrollReveal>
             <ScrollReveal direction="up" delay={0.25}>
               <div className="mt-10">
-                <CTAButton
-                  variant="coral"
-                  size="lg"
-                  className="rounded-none border-4 border-charcoal shadow-[8px_8px_0px_#404042] hover:shadow-[4px_4px_0px_#404042] hover:translate-x-[4px] hover:translate-y-[4px] transition-all uppercase tracking-wide text-xl"
+                <div
+                  className="meetings-iframe-container"
+                  data-src="https://meetings-eu1.hubspot.com/becci-gill?embed=true"
                 />
-              </div>
-              <div className="mt-4">
-                <CalendarBooking url={calendarBookingUrl} className="text-coral" />
               </div>
             </ScrollReveal>
           </div>

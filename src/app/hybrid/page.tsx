@@ -1,10 +1,10 @@
 "use client";
 
+import Script from "next/script";
 import { LogoPair } from "@/components/shared/logo-pair";
 import { CTAButton } from "@/components/shared/cta-button";
 import { StatCounter } from "@/components/shared/stat-counter";
 import { ClientLogos } from "@/components/shared/client-logos";
-import { CalendarBooking } from "@/components/shared/calendar-embed";
 import { ScrollReveal, FadeIn } from "@/components/motion";
 import {
   hero,
@@ -21,7 +21,6 @@ import {
   ctaSection,
   footer,
   contactEmails,
-  calendarBookingUrl,
 } from "@/lib/content/tfl";
 import {
   problemStats,
@@ -77,7 +76,7 @@ export default function HybridPage() {
       <header className="border-b border-gardenia">
         <div className="max-w-7xl mx-auto px-4 py-3 sm:px-6 sm:py-4 flex items-center justify-between gap-2 sm:gap-3 overflow-hidden">
           <LogoPair kareheroVariant="coral" size="md" />
-          <CTAButton variant="coral" size="md" className="hidden sm:inline-block" />
+          <CTAButton variant="coral" size="md" className="hidden sm:inline-block" href="#calendar" />
         </div>
       </header>
 
@@ -101,7 +100,7 @@ export default function HybridPage() {
           </FadeIn>
           <FadeIn delay={0.6}>
             <div className="mt-10">
-              <CTAButton variant="white" size="lg" />
+              <CTAButton variant="white" size="lg" href="#calendar" />
             </div>
           </FadeIn>
         </div>
@@ -416,8 +415,9 @@ export default function HybridPage() {
         </div>
       </section>
 
-      {/* ─── CTA - Full-width with calendar booking ─── */}
-      <section className="bg-coral text-white py-20 md:py-28">
+      {/* ─── CTA + HUBSPOT CALENDAR ─── */}
+      <section id="calendar" className="bg-coral text-white py-20 md:py-28">
+        <Script src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js" strategy="lazyOnload" />
         <div className="max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal>
             <h2 className="font-lora italic font-semibold text-3xl sm:text-4xl md:text-5xl text-white">
@@ -443,10 +443,10 @@ export default function HybridPage() {
 
           <ScrollReveal delay={0.4}>
             <div className="mt-10">
-              <CTAButton variant="white" size="lg" />
-            </div>
-            <div className="mt-4">
-              <CalendarBooking url={calendarBookingUrl} className="text-white/80 hover:text-white" />
+              <div
+                className="meetings-iframe-container"
+                data-src="https://meetings-eu1.hubspot.com/becci-gill?embed=true"
+              />
             </div>
             <div className="mt-8 text-sm text-white/60 flex flex-col sm:flex-row items-center justify-center gap-2 break-all">
               {contactEmails.map((email, i) => (
