@@ -48,9 +48,9 @@ function StatCard({
   delay?: number;
 }) {
   return (
-    <ScrollReveal direction="up" delay={delay}>
+    <ScrollReveal direction="up" delay={delay} className="h-full">
       <div
-        className={`${bgColor} rounded-2xl p-6 shadow-sm border border-gardenia hover:shadow-md transition-shadow`}
+        className={`${bgColor} rounded-2xl p-6 shadow-sm border border-gardenia hover:shadow-md transition-shadow h-full`}
       >
         <p
           className={`font-work-sans font-bold text-3xl sm:text-4xl tabular-nums ${valueColor}`}
@@ -240,8 +240,8 @@ export default function DataVizPage() {
             {tflProjectionStats.map((stat, i) => {
               const parsed = parseStatValue(stat.value);
               return (
-                <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                  <div className="bg-marine-green rounded-2xl p-8 text-center text-white">
+                <ScrollReveal key={i} direction="up" delay={i * 0.1} className="h-full">
+                  <div className="bg-marine-green rounded-2xl p-8 text-center text-white h-full">
                     {parsed.num > 0 ? (
                       <CountUp
                         end={parsed.num}
@@ -376,7 +376,7 @@ export default function DataVizPage() {
 
           <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((service, i) => (
-              <ScrollReveal key={i} direction="up" delay={i * 0.08}>
+              <ScrollReveal key={i} direction="up" delay={i * 0.08} className="h-full">
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-7 hover:bg-white/10 transition-colors h-full">
                   <div className="w-16 h-16 rounded-xl bg-coral/20 text-coral flex items-center justify-center mb-5">
                     <ChallengeIcon icon={service.icon} />
@@ -451,8 +451,8 @@ export default function DataVizPage() {
             </ScrollReveal>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {baResultStats.map((stat, i) => (
-                <ScrollReveal key={i} direction="up" delay={i * 0.1}>
-                  <div className="bg-coral/5 border border-coral/20 rounded-2xl p-6">
+                <ScrollReveal key={i} direction="up" delay={i * 0.1} className="h-full">
+                  <div className="bg-coral/5 border border-coral/20 rounded-2xl p-6 h-full">
                     <p className="font-work-sans font-bold text-3xl sm:text-4xl tabular-nums text-coral">
                       {stat.value}
                     </p>

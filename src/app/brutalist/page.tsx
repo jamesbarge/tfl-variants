@@ -219,8 +219,8 @@ export default function BrutalistPage() {
             {/* Services */}
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
               {services.map((service, i) => (
-                <ScrollReveal key={i} direction="up" delay={i * 0.08}>
-                  <div className="border-4 border-white/40 p-8 -ml-1 -mt-1 hover:bg-white/10 transition-colors">
+                <ScrollReveal key={i} direction="up" delay={i * 0.08} className="h-full">
+                  <div className="border-4 border-white/40 p-8 -ml-1 -mt-1 hover:bg-white/10 transition-colors h-full">
                     <span className="block font-mono text-5xl sm:text-6xl font-bold text-white/30 mb-4">
                       {String(i + 1).padStart(2, "0")}
                     </span>
